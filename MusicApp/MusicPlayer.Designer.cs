@@ -52,9 +52,7 @@
             this.btn_pause = new System.Windows.Forms.Button();
             this.btn_play = new System.Windows.Forms.Button();
             this.lbl_Track_Start = new System.Windows.Forms.Label();
-            this.BtnSelectSongs = new System.Windows.Forms.Button();
             this.track_list = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.p_bar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_Track_End = new System.Windows.Forms.Label();
@@ -320,35 +318,15 @@
             this.lbl_Track_Start.TabIndex = 14;
             this.lbl_Track_Start.Text = "00:00";
             // 
-            // BtnSelectSongs
-            // 
-            this.BtnSelectSongs.Location = new System.Drawing.Point(695, 173);
-            this.BtnSelectSongs.Name = "BtnSelectSongs";
-            this.BtnSelectSongs.Size = new System.Drawing.Size(75, 23);
-            this.BtnSelectSongs.TabIndex = 12;
-            this.BtnSelectSongs.Text = "Select Song";
-            this.BtnSelectSongs.UseVisualStyleBackColor = true;
-            this.BtnSelectSongs.Click += new System.EventHandler(this.BtnSelectSongs_Click);
-            // 
             // track_list
             // 
             this.track_list.ForeColor = System.Drawing.Color.Black;
             this.track_list.FormattingEnabled = true;
-            this.track_list.Location = new System.Drawing.Point(345, 237);
+            this.track_list.Location = new System.Drawing.Point(345, 212);
             this.track_list.Name = "track_list";
             this.track_list.Size = new System.Drawing.Size(443, 134);
             this.track_list.TabIndex = 13;
             this.track_list.SelectedIndexChanged += new System.EventHandler(this.ListBoxSongs_SelectedIndexChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(381, 204);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(181, 27);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Playing: ";
             // 
             // p_bar
             // 
@@ -376,7 +354,7 @@
             // pic_art
             // 
             this.pic_art.Image = global::MusicApp.Properties.Resources.download__1__removebg_preview;
-            this.pic_art.Location = new System.Drawing.Point(201, 227);
+            this.pic_art.Location = new System.Drawing.Point(202, 212);
             this.pic_art.Name = "pic_art";
             this.pic_art.Size = new System.Drawing.Size(138, 119);
             this.pic_art.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -411,9 +389,7 @@
             this.Controls.Add(this.lbl_Track_End);
             this.Controls.Add(this.lbl_Track_Start);
             this.Controls.Add(this.p_bar);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.track_list);
-            this.Controls.Add(this.BtnSelectSongs);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -446,7 +422,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button BtnSelectSongs;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_play;
         private System.Windows.Forms.Button btn_pause;
@@ -454,7 +429,6 @@
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.Button btn_open;
         private System.Windows.Forms.ListBox track_list;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_stop;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.ProgressBar p_bar;
