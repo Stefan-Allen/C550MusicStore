@@ -1,0 +1,152 @@
+/* Login Form */
+.BodyLogin[b-zj5ggrvo40] {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
+}
+
+.BackSquare[b-zj5ggrvo40] {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form[b-zj5ggrvo40] {
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0),
+    0 5px 5px 0 rgba(255, 255, 255, 0);
+}
+
+.tableContainer-1[b-zj5ggrvo40] {
+  width: 120%;
+  display: table;
+  margin-top: 20%;
+  margin-left: -30%;
+}
+
+.LoginText[b-zj5ggrvo40] {
+  color: rgb(50, 50, 50);
+  font-size: 38px;
+  font-weight: 500;
+  height: 100px;
+  width: 100px;
+  margin-top: -65%;
+  margin-left: 120%;
+}
+
+.tableContainer-2[b-zj5ggrvo40] {
+  vertical-align: middle;
+  display: table-cell;
+  height: 100%;
+}
+
+.login-form[b-zj5ggrvo40] {
+  position: relative;
+  z-index: 1;
+  color: rgb(50, 50, 50);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.email[b-zj5ggrvo40] {
+  color: #000000;
+  width: 125%;
+  border: 10px;
+  margin-left: -25px;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  background: #f2f2f2;
+  padding: 12.5px;
+}
+
+.password[b-zj5ggrvo40] {
+  color: #000000;
+  width: 125%;
+  border: 10px;
+  margin-left: -25px;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  background: #f2f2f2;
+  padding: 12.5px;
+}
+
+.forgotpassword[b-zj5ggrvo40] {
+  color: rgb(50, 50, 50);
+  text-align: center;
+  font-size: 9px;
+  background-color: transparent;
+  border-color: transparent;
+  margin-left: 35.5px;
+  width: 105%;
+  margin-top: -15px;
+}
+
+.forgotpassword1[b-zj5ggrvo40] {
+  float: left;
+  width: 70%;
+  margin-left: 40px;
+  font-size: 8px;
+}
+
+.forgotpassword2[b-zj5ggrvo40] {
+  float: right;
+  width: 70%;
+  font-size: 8px;
+  margin-top: -17.5px;
+  width: 50%;
+  font-size: 9px;
+}
+
+.checkbox-example[b-zj5ggrvo40] {
+  color: rgb(50, 50, 50);
+  text-align: center;
+  font-size: 8px;
+  width: 110%;
+  margin-top: -10px;
+}
+
+.checkbox-examplebox[b-zj5ggrvo40] {
+  margin-left: -280.5px;
+}
+
+.remember[b-zj5ggrvo40] {
+  margin-top: -20px;
+  width: 50%;
+  font-size: 10px;
+  margin-left: -50.5px;
+}
+
+.btnbtnprimary[b-zj5ggrvo40] {
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  outline: 0;
+  margin-left: -25px;
+  background: #941a1a;
+  width: 125%;
+  border: 0;
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.registered[b-zj5ggrvo40] {
+  margin-top: 60px;
+  color: black;
+}
+
+.Create[b-zj5ggrvo40] {
+  color: #2196f3;
+  font-size: smaller;
+}

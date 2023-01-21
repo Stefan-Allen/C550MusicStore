@@ -1,0 +1,57 @@
+﻿@page "/Login"
+
+<!-- Login Form -->
+
+<body class="BodyLogin">
+    <form method="post">
+        <div class="BackSquare">
+            <div class="form">
+                <div id="tableContainer-1" class="tableContainer-1">
+
+                    <div class="LoginText">
+                        MusicStore
+                    </div>
+                    <div id="tableContainer-2" class="tableContainer-2">
+                        <form method="post" class="login-form">
+                            <p>
+                                <input class="email" required="" type="email" placeholder="Email" />
+                            </p>
+                            <p>
+                                <input class="password" required="" type="password" placeholder="Password" />
+                            </p>
+                            <p>
+                                <button type="submit" class="btnbtnprimary">
+                                    Sign In
+                                </button>
+                            </p>
+
+                            <div class="forgotpassword1">
+                                <div class="checkbox-example">
+                                    <input class="checkbox-examplebox" type="checkbox" value="1"
+                                        id="checkboxOneInput" />
+                                    <label for="checkboxOneInput"></label>
+                                    <div class="remember">Remember Me</div>
+                                </div>
+                            </div>
+                            <div class="forgotpassword2">
+                                <button class="forgotpassword">
+                                    <a href="https://www.google.com">
+                                        Forgot password?
+                                    </a>
+                                </button>
+                            </div>
+                            <p class="registered">
+                                Not registered?
+                            </p>
+                            <a class="Create" href="/Register">Create an account</a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+@code {
+}

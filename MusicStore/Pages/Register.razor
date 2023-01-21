@@ -1,0 +1,194 @@
+﻿@page "/Register"
+
+<!-- Login Form -->
+
+<body class="BodyRegister">
+    <form method="post">
+        <div class="BackSquare">
+            <div class="form">
+                <div id="tableContainer-1" class="tableContainer-1">
+
+                    <div class="RegisterText">
+                        MusicStore
+                    </div>
+                    <div id="tableContainer-2" class="tableContainer-2">
+                        <form method="post" class="Register-form">
+                            <p>
+                                <input class="email" required="" type="email" placeholder="Email" />
+                            </p>
+                            <p>
+                                <input class="firstName" required="" type="text" placeholder="Full Name" />
+                            </p>
+                            <p>
+                                <input class="password" required="" type="password" placeholder="Password" />
+                            </p>
+                            <p class="DOB-Style">
+                                <select class="dob1" name="gender" required="" asp-for="1">
+                                    <option value="">Day</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select class="dob2" name="gender" required="" asp-for="Jan">
+                                    <option value="">Month</option>
+                                    <option value="Jan">Jan</option>
+                                    <option value="Feb">Feb</option>
+                                    <option value="Mar">Mar</option>
+                                    <option value="Apr">Apr</option>
+                                    <option value="May">May</option>
+                                    <option value="Jun">Jun</option>
+                                    <option value="Jul">Jul</option>
+                                    <option value="Aug">Aug</option>
+                                    <option value="Sep">Sep</option>
+                                    <option value="Oct">Oct</option>
+                                    <option value="Nov">Nov</option>
+                                    <option value="Dec">Dec</option>
+
+                                </select>
+                                <select class="dob3" name="gender" required="" asp-for="2022">
+                                    <option value="">Year</option>
+                                    <option value="2022">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2022">1999</option>
+                                    <option value="2021">1998</option>
+                                    <option value="2020">1997</option>
+                                    <option value="2019">1996</option>
+                                    <option value="2018">1995</option>
+                                    <option value="2017">1994</option>
+                                    <option value="2016">1993</option>
+                                    <option value="2016">1993</option>
+                                    <option value="2015">1992</option>
+                                    <option value="2015">1991</option>
+                                    <option value="2016">1990</option>
+                                    <option value="2015">1989</option>
+                                    <option value="2014">1988</option>
+                                    <option value="2013">1987</option>
+                                    <option value="2012">1986</option>
+                                    <option value="2011">1985</option>
+                                    <option value="2010">1984</option>
+                                    <option value="2009">1983</option>
+                                    <option value="2008">1982</option>
+                                    <option value="2007">1981</option>
+                                    <option value="2006">1980</option>
+                                    <option value="2005">1979</option>
+                                    <option value="2004">1978</option>
+                                    <option value="2003">1977</option>
+                                    <option value="2002">1976</option>
+                                    <option value="2001">1975</option>
+                                    <option value="2000">1974</option>
+                                    <option value="2003">1973</option>
+                                    <option value="2002">1972</option>
+                                    <option value="2001">1971</option>
+                                    <option value="2000">1970</option>
+                                    <option value="2005">1969</option>
+                                    <option value="2004">1968</option>
+                                    <option value="2003">1967</option>
+                                    <option value="2002">1966</option>
+                                    <option value="2001">1965</option>
+                                    <option value="2000">1964</option>
+                                    <option value="2003">1963</option>
+                                    <option value="2002">1962</option>
+                                    <option value="2001">1961</option>
+                                    <option value="2000">1960</option>
+                                    <option value="2005">1959</option>
+                                    <option value="2004">1958</option>
+                                    <option value="2003">1957</option>
+                                    <option value="2002">1956</option>
+                                    <option value="2001">1955</option>
+                                    <option value="2000">1954</option>
+                                    <option value="2003">1953</option>
+                                    <option value="2002">1952</option>
+                                    <option value="2001">1951</option>
+                                    <option value="2000">1950</option>
+                                </select>
+                            </p>
+                            <p class="Gender-Style">
+                                <select class="gender" name="gender" required="" asp-for="Gender">
+                                    <option value="">Gender</option>
+                                    <option value="O">Other</option>
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
+                                </select>
+                                <select class="title" name="title" required="" asp-for="Title">
+                                    <option value="">Title</option>
+                                    <option value="Mr">Mr</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Mx">Mx</option>
+                                </select>
+                            </p>
+                            <p>
+                                <button type="submit" class="btnbtnprimary">
+                                    Sign In
+                                </button>
+                            </p>
+                            <div class="Text-Account">
+                                Already have an account?
+                                <a class="Login" href="/Login">Log In!</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<!-- Login Form -->
+@code {
+
+}
