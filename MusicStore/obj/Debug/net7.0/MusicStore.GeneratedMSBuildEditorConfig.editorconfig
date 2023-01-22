@@ -9,7 +9,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MusicStore
 build_property.RootNamespace = MusicStore
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
@@ -54,55 +53,5 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/_Host.cshtml]
-=======
-build_property.ProjectDir = D:\Development\University\C550\MusicPlayer\MusicStore\
-build_property.RazorLangVersion = 7.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Development\University\C550\MusicPlayer\MusicStore
-build_property._RazorSourceGeneratorDebug = 
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/App.razor]
-build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-zj5ggrvo40
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Register.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-k31uor7rge
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-9h71sga2q3
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-qqt4bte5pa
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/_Host.cshtml]
->>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
