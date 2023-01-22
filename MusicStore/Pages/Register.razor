@@ -1,4 +1,10 @@
 ﻿@page "/Register"
+@using MusicStore.Data
+@using System.Diagnostics
+@using System.Globalization
+@using System.Net
+
+@inject UserService _UserService
 
 <!-- Login Form -->
 
@@ -14,16 +20,16 @@
                     <div id="tableContainer-2" class="tableContainer-2">
                         <form method="post" class="Register-form">
                             <p>
-                                <input class="email" required="" type="email" placeholder="Email" />
+                                <input class="email" required="" type="email" placeholder="Email" @bind="Email"/>
                             </p>
                             <p>
-                                <input class="firstName" required="" type="text" placeholder="Full Name" />
+                                <input class="firstName" required="" type="text" placeholder="Full Name" @bind="FullName"/>
                             </p>
                             <p>
-                                <input class="password" required="" type="password" placeholder="Password" />
+                                <input class="password" required="" type="password" placeholder="Password" @bind="Password"/>
                             </p>
                             <p class="DOB-Style">
-                                <select class="dob1" name="gender" required="" asp-for="1">
+                                <select class="dob1" name="gender" required="" asp-for="1" @bind="DOBDay">
                                     <option value="">Day</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -57,7 +63,7 @@
                                     <option value="30">30</option>
                                     <option value="31">31</option>
                                 </select>
-                                <select class="dob2" name="gender" required="" asp-for="Jan">
+                                <select class="dob2" name="gender" required="" asp-for="Jan" @bind="DOBMonth">
                                     <option value="">Month</option>
                                     <option value="Jan">Jan</option>
                                     <option value="Feb">Feb</option>
@@ -73,7 +79,7 @@
                                     <option value="Dec">Dec</option>
 
                                 </select>
-                                <select class="dob3" name="gender" required="" asp-for="2022">
+                                <select class="dob3" name="gender" required="" asp-for="2022" @bind="DOBYear">
                                     <option value="">Year</option>
                                     <option value="2022">2023</option>
                                     <option value="2022">2022</option>
@@ -157,13 +163,13 @@
                                 </select>
                             </p>
                             <p class="Gender-Style">
-                                <select class="gender" name="gender" required="" asp-for="Gender">
+                                <select class="gender" name="gender" required="" asp-for="Gender" @bind="Gender">
                                     <option value="">Gender</option>
                                     <option value="O">Other</option>
                                     <option value="M">Male</option>
                                     <option value="F">Female</option>
                                 </select>
-                                <select class="title" name="title" required="" asp-for="Title">
+                                <select class="title" name="title" required="" asp-for="Title" @bind="Title">
                                     <option value="">Title</option>
                                     <option value="Mr">Mr</option>
                                     <option value="Miss">Miss</option>
@@ -190,5 +196,27 @@
 </body>
 <!-- Login Form -->
 @code {
+    private string FullName { get; set; } = string.Empty;
+    private string Email { get; set; } = string.Empty;
+    private string Password { get; set; } = string.Empty;
+    private string DOBDay { get; set; } = string.Empty;
+    private string DOBMonth { get; set; } = string.Empty;
+    private string DOBYear { get; set; } = string.Empty;
+    private string Gender { get; set; } = string.Empty;
+    private string Title { get; set; } = string.Empty;
 
+    private async Task RegisterAsync()
+    {
+        DateTime.TryParseExact($"{DOBMonth}-{DOBDay}-{DOBYear}", "MM-dd-yy", null, DateTimeStyles.None, out var parsedDob);
+        var result = await _UserService.RegisterAsync(Email, Password, FullName, dob: parsedDob, Gender, Title);
+
+        if (result == HttpStatusCode.Conflict)
+        {
+            
+        }
+        else
+        {
+            
+        }
+    }
 }

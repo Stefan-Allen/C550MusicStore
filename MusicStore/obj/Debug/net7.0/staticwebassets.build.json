@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "nEuNb8vt8Q/qXfu7TpruOS4olBfhxY67An1UKaFkhU4=",
+=======
+  "Hash": "v+I9tO8Z3mCJr471rwEqR6Yrv5JgPWT0pgyvNlbBopM=",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
   "Source": "MusicStore",
   "BasePath": "_content/MusicStore",
   "Mode": "Default",
@@ -10,17 +14,28 @@
     {
       "Name": "MusicStore\\wwwroot",
       "Source": "MusicStore",
+<<<<<<< HEAD
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+=======
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\bundle\\MusicStore.styles.css",
       "SourceId": "MusicStore",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\bundle\\MusicStore.styles.css",
+      "SourceId": "MusicStore",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "MusicStore.styles.css",
       "AssetKind": "All",
@@ -31,6 +46,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\bundle\\MusicStore.styles.css"
     },
     {
@@ -38,6 +54,15 @@
       "SourceId": "MusicStore",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\bundle\\MusicStore.styles.css"
+    },
+    {
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MusicStore.bundle.scp.css",
+      "SourceId": "MusicStore",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "MusicStore.bundle.scp.css",
       "AssetKind": "All",
@@ -48,6 +73,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MusicStore.bundle.scp.css"
     },
     {
@@ -55,6 +81,15 @@
       "SourceId": "MusicStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+=======
+      "OriginalItemSpec": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MusicStore.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +103,17 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "MusicStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+=======
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,6 +127,7 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "MusicStore",
       "SourceType": "Discovered",
@@ -191,6 +234,12 @@
       "SourceId": "MusicStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+=======
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +253,119 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "MusicStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+=======
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+      "BasePath": "_content/MusicStore",
+      "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+      "BasePath": "_content/MusicStore",
+      "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+      "BasePath": "_content/MusicStore",
+      "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+      "BasePath": "_content/MusicStore",
+      "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+      "BasePath": "_content/MusicStore",
+      "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+      "BasePath": "_content/MusicStore",
+      "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +379,17 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "MusicStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+=======
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\open-iconic\\README.md",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +403,17 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\css\\site.css",
       "SourceId": "MusicStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+=======
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\css\\site.css",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +427,17 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\favicon.png",
       "SourceId": "MusicStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+=======
+      "Identity": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\favicon.png",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\University\\C550\\MusicPlayer\\MusicStore\\wwwroot\\",
+>>>>>>> fbd508ed6e6faa82dcc13b4d006009e315ded862
       "BasePath": "_content/MusicStore",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

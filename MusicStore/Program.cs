@@ -2,12 +2,15 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using MusicStore.Data;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<UserService>();
 
 var app = builder.Build();
 
@@ -27,5 +30,9 @@ app.UseRouting();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+
+var us = new UserService();
+
+await us.LoginAsync("Test", "Test");
 
 app.Run();
