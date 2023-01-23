@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cb7qf7IURhHJbJUcg80k66Z6CrjIv1sM9uCZ3lVf2mFjRHhy15Z/nlVmVX+xFYNa3mjL8f80IffNp3lRamNUSA==",
+  "dgSpecHash": "rRYZoZSOnN4a3/pIFToyCkwMMk36g5hzMu/7IH0VWsYU+3/Tv5j2hklhn7O/hPgt/YXwDiXrc25z2qxdXGlaAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\MusicStore.csproj",
   "expectedPackageFiles": [
@@ -29,12 +29,5 @@
     "C:\\Users\\stefa\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\stefa\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

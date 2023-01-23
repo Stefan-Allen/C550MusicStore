@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.4.33205.214
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore", "MusicStore.csproj", "{DBB90D7C-CEE7-499C-B901-85CEF6B3D87D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore", "MusicStore.csproj", "{C75DD75D-FDBB-4B03-8DE9-AE4B04FC7B25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DBB90D7C-CEE7-499C-B901-85CEF6B3D87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBB90D7C-CEE7-499C-B901-85CEF6B3D87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBB90D7C-CEE7-499C-B901-85CEF6B3D87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBB90D7C-CEE7-499C-B901-85CEF6B3D87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C75DD75D-FDBB-4B03-8DE9-AE4B04FC7B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75DD75D-FDBB-4B03-8DE9-AE4B04FC7B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75DD75D-FDBB-4B03-8DE9-AE4B04FC7B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C75DD75D-FDBB-4B03-8DE9-AE4B04FC7B25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4F6683D1-6471-459C-B5F2-121F5E8A442A}
+		SolutionGuid = {566F039E-78B9-4358-BC74-4543E1441694}
 	EndGlobalSection
 EndGlobal
