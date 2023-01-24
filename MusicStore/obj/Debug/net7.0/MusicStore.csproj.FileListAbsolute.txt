@@ -130,3 +130,7 @@ C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Deb
 C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\MusicStore.pdb
 C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\MusicStore.genruntimeconfig.cache
 C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\ref\MusicStore.dll
+C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\Basket.razor.rz.scp.css
+C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\Home.razor.rz.scp.css
+C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\Profile.razor.rz.scp.css
+C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\Search.razor.rz.scp.css

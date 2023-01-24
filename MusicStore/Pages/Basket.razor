@@ -1,0 +1,151 @@
+﻿@page "/Basket"
+
+<section>
+    <h1 class="basket">Basket</h1>
+
+    <article class="product">
+
+        <a class="thumbnail" href="/products/85-product-culpa-dolor-aliquip">
+            <img src="/th.jpg" alt=
+        "Product Culpa Dolor Aliquip" /></a>
+
+        <div class="info">
+            <a class="name" href="/products/85-product-culpa-dolor-aliquip">Product Culpa Dolor Aliquip</a>
+
+            <div class="data-group">
+                <span class="data">
+                    <strong>Price:</strong>&pound;3.86
+                </span>
+
+                <span class="data">
+                    <strong>Qty:</strong>1
+                </span>
+
+                <span class="data">
+                    <strong>Total:</strong>&pound;3.86
+                </span>
+
+                <span class="data">
+                    <form action="/basket/remove" method="post">
+                        <input class="btn" type="submit" name="remove[1]" value="Remove" />
+                    </form>
+                </span>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product">
+
+        <a class="thumbnail" href="/products/85-product-culpa-dolor-aliquip">
+            <img src="/th.jpg" alt="Product Culpa Dolor Aliquip" /></a>
+
+        <div class="info">
+            <a class="name" href="/products/85-product-culpa-dolor-aliquip">Product Culpa Dolor Aliquip</a>
+
+            <div class="data-group">
+                <span class="data">
+                    <strong>Price:</strong>&pound;3.86
+                </span>
+
+                <span class="data">
+                    <strong>Qty:</strong>1
+                </span>
+
+                <span class="data">
+                    <strong>Total:</strong>&pound;3.86
+                </span>
+
+                <span class="data">
+                    <form action="/basket/remove" method="post">
+                        <input class="btn" type="submit" name="remove[1]" value="Remove" />
+                    </form>
+                </span>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product">
+
+        <a class="thumbnail" href="/products/85-product-culpa-dolor-aliquip">
+            <img src="/th.jpg" alt="Product Culpa Dolor Aliquip" /></a>
+
+        <div class="info">
+            <a class="name" href="/products/85-product-culpa-dolor-aliquip">Product Culpa Dolor Aliquip</a>
+
+            <div class="data-group">
+                <span class="data">
+                    <strong>Price:</strong>&pound;3.86
+                </span>
+
+                <span class="data">
+                    <strong>Qty:</strong>1
+                </span>
+
+                <span class="data">
+                    <strong>Total:</strong>&pound;3.86
+                </span>
+
+                <span class="data">
+                    <form action="/basket/remove" method="post">
+                        <input class="btn" type="submit" name="remove[1]" value="Remove" />
+                    </form>
+                </span>
+            </div>
+        </div>
+
+    </article>
+
+    <footer>
+        <form action="/basket/empty" method="post">
+            <input class="btn" type="submit" value="Empty" />
+        </form>
+        <form action="/basket/update" method="post">
+            <input class="btn" type="submit" value="Update" />
+        </form>
+        <form action="/basket/update" method="post">
+            <input class="btn" type="submit" value="Go to Checkout" />
+        </form>
+    </footer>
+
+</section>
+
+
+<section class="totals">
+    <h2 class="totals">Totals</h2>
+    <table class="table table-condensed table-striped cart-totals">
+
+        <tbody>
+         <tr>
+            <th>Sub Total</th>
+            <td>&pound;11.92</td>
+         </tr>
+
+         <tr>
+            <th>Shipping Estimate</th>
+            <td>&pound;5.00</td>
+         </tr>
+
+         <tr>
+            <th>Tax</th>
+            <td>&pound;2.38</td>
+         </tr>
+
+         <tr>
+            <th>Grand Total</th>
+            <td>&pound;19.30</td>
+         </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <form action="/basket/update" method="post">
+            <input class="btn" type="submit" value="Go to Checkout" />
+        </form>
+    </footer>
+</section>
+
+@code {
+
+}

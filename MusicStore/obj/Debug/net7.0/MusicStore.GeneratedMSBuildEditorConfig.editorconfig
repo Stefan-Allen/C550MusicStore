@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,13 +28,29 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Basket.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFza2V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-8ku1vmiwcx
+
+[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-s0vg48o4ts
+
 [C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-zj5ggrvo40
 
+[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-6mzorskmac
+
 [C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-k31uor7rge
+
+[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Search.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-f5pwtwigw7
 
 [C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=

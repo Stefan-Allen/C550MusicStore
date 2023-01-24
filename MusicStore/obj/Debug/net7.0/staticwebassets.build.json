@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nEuNb8vt8Q/qXfu7TpruOS4olBfhxY67An1UKaFkhU4=",
+  "Hash": "Z//hQdVsdII52y2Vk9lnskbtglDp7xDaP9Z+b3pSpP4=",
   "Source": "MusicStore",
   "BasePath": "_content/MusicStore",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\th.jpg",
+      "SourceId": "MusicStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stefa\\OneDrive\\Documents\\AirChat\\AirChat\\MusicPlayer\\MusicStore\\wwwroot\\",
+      "BasePath": "_content/MusicStore",
+      "RelativePath": "th.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\th.jpg"
     }
   ]
 }
