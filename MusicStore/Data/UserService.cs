@@ -1,6 +1,7 @@
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.VisualBasic;
 using MusicStore.Schemas;
 
 namespace MusicStore.Data;
@@ -8,20 +9,22 @@ namespace MusicStore.Data;
 public class UserService
 {
     public UserSchema? User;
+    private static string salt = "ododokdodkodkdokdokdokdodkodkodkdokdokd"; 
     
     public async Task<HttpStatusCode> LoginAsync(string username, string password)
     {
         var db = new Database();
         await db.Database.EnsureCreatedAsync();
 
-        var user = db.Users.FirstOrDefault(x => string.Equals(x.Username, username, StringComparison.CurrentCultureIgnoreCase), null);
+        var user = db.Users.FirstOrDefault(x => x.Username.ToLower().Trim() == username.ToLower().Trim());
 
         if (user == null)
         {
             return HttpStatusCode.NotFound;
         }
-
-        if (!VerifyPassword(password, user.Password, Encoding.UTF8.GetBytes(user.Salt)))
+        Console.WriteLine(user.Password);
+        Console.WriteLine(password);
+        if (user.Password.Trim() != password.Trim())
         {
             return HttpStatusCode.Forbidden;
         }
@@ -42,8 +45,8 @@ public class UserService
             return HttpStatusCode.Conflict;
         }
 
-        var hashed = HashPasword(password, out var salt);
-        
+        var hashed = HashPasword(password);
+
         var user = new UserSchema
         {
             Created = DateTime.Now,
@@ -51,8 +54,8 @@ public class UserService
             Dob = dob,
             Username = username.Trim(),
             FullName = fullName,
-            Password = hashed,
-            Salt = Encoding.UTF8.GetString(salt),
+            Password = password,
+            Salt = salt,
             Gender = gender
         };
 
@@ -63,21 +66,20 @@ public class UserService
         return HttpStatusCode.Created;
     }
     
-    private string HashPasword(string password, out byte[] salt)
+    private string HashPasword(string password)
     {
-        salt = RandomNumberGenerator.GetBytes(64);
         var hash = Rfc2898DeriveBytes.Pbkdf2(
             Encoding.UTF8.GetBytes(password),
-            salt,
+            Encoding.UTF8.GetBytes(salt),
             350000,
             HashAlgorithmName.SHA512,
             64);
         return Convert.ToHexString(hash);
     }
     
-    private bool VerifyPassword(string password, string hash, byte[] salt)
+    private bool VerifyPassword(string password, string hash)
     {
-        var hashToCompare = Rfc2898DeriveBytes.Pbkdf2(password, salt, 35000, HashAlgorithmName.SHA512, 64);
+        var hashToCompare = Rfc2898DeriveBytes.Pbkdf2(password, Encoding.UTF8.GetBytes(salt), 35000, HashAlgorithmName.SHA512, 64);
         return hashToCompare.SequenceEqual(Convert.FromHexString(hash));
     }
 }

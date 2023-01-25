@@ -26,6 +26,20 @@ BodyProfile {
     box-shadow: 0 2.5px 5px #ccc;
 }
 
+.btnbtnprimary {
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    outline: 0;
+    margin-left: 0px;
+    background: #941a1a;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    cursor: pointer;
+}
+
 .content {
     /* position: absolute; */
     min-height: 100%;

@@ -13,7 +13,6 @@
 
     .form[b-zj5ggrvo40] {
         border-radius: 10px;
-        position: relative;
         z-index: 1;
         background-color: rgb(255, 255, 255);
         max-width: 360px;
@@ -24,10 +23,10 @@
     }
 
     .tableContainer-1[b-zj5ggrvo40] {
-        width: 120%;
+        width: 150%;
         display: table;
         margin-top: 20%;
-        margin-left: -30%;
+        margin-left: -46%;
     }
 
     .LoginText[b-zj5ggrvo40] {
@@ -37,7 +36,7 @@
         height: 100px;
         width: 100px;
         margin-top: -65%;
-        margin-left: 125%;
+        margin-left: 170%;
     }
 
     .tableContainer-2[b-zj5ggrvo40] {
@@ -51,7 +50,7 @@
         z-index: 1;
         color: rgb(50, 50, 50);
         max-width: 360px;
-        margin: 0 auto 100px;
+        margin: 0 auto 20px;
         padding: 45px;
         text-align: center;
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);

@@ -1,5 +1,5 @@
-﻿@page "/"
-@page "/Login"
+﻿@page "/Login"
+
 
 @using MusicStore.Data
 @using System.Net
@@ -10,21 +10,26 @@
 <!-- Login Form -->
 
 <body class="BodyLogin">
-    <form method="post">
+    <div>
+        
         <div class="BackSquare">
             <div class="form">
+                
                 <div id="tableContainer-1" class="tableContainer-1">
-
                     <div class="LoginText">
                         BNUify
                     </div>
+                    
                     <div id="tableContainer-2" class="tableContainer-2">
-                        <form method="post" class="login-form">
+                        <p>
+                            @Message
+                        </p>
+                        <div method="post" class="login-form">
                             <p>
-                                <input class="email" required="" type="email" placeholder="Email" @bind="Email"/>
+                                <input class="email" required="" type="username" placeholder="Username" @bind="Email" />
                             </p>
                             <p>
-                                <input class="password" required="" type="password" placeholder="Password" />
+                                <input class="password" required="" type="password" placeholder="Password" @bind="Password" />
                             </p>
                             <p>
                                 <button class="btnbtnprimary" @onclick="LoginFn">
@@ -34,19 +39,20 @@
                             <p class="registered">
                                 Not registered?
                             </p>
-                            <a class="Create" href="/Register">Create an account</a>
+                            <a class="Create" href="/">Create an account</a>
 
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
 </body>
 
 @code {
     private string Email { get; set; } = string.Empty;
     private string Password { get; set; } = string.Empty;
+    private string Message { get; set; } = string.Empty;
 
     public void LoginFn()
     {
@@ -56,15 +62,21 @@
         {
             // User Account Does Not Exist
             case HttpStatusCode.NotFound:
+                Console.WriteLine("1");
+                Message = "User not found";
                 break;
             // Invalid Password
             case HttpStatusCode.Forbidden:
+                Console.WriteLine("2");
+                Message = "Incorrect password";
                 break;
             // Correct Password
             case HttpStatusCode.Accepted:
+                Console.WriteLine("3");
                 NavManager.NavigateTo("/Home");
                 break;
             default:
+                Console.WriteLine("4");
                 break;
         }
     }

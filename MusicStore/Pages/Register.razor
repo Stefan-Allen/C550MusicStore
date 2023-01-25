@@ -1,4 +1,4 @@
-﻿@page "/Register"
+﻿@page "/"
 @using MusicStore.Data
 @using System.Diagnostics
 @using System.Globalization
@@ -11,7 +11,7 @@
 <!-- Login Form -->
 
 <body class="BodyRegister">
-    <form method="post">
+    <div method="post">
         <div class="BackSquare">
             <div class="form">
                 <div id="tableContainer-1" class="tableContainer-1">
@@ -20,7 +20,7 @@
                         BNUify
                     </div>
                     <div id="tableContainer-2" class="tableContainer-2">
-                        <form method="post" class="Register-form">
+                        <div method="post" class="Register-form">
                             <p>
                                 <input class="email" required="" type="text" placeholder="Username" @bind="Username"/>
                             </p>
@@ -179,22 +179,22 @@
                                     <option value="Mx">Mx</option>
                                 </select>
                             </p>
-                            <p>
+                            <span>
                                 <button class="btnbtnprimary" @onclick="RegisterFn">
                                     Register
                                 </button>
-                            </p>
+                            </span>
                             <div class="Text-Account">
                                 Already have an account?
-                                <a class="Login" href="/">Log In!</a>
+                                <a class="Login" href="/Login">Log In!</a>
                             </div>
 
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
 </body>
 <!-- Login Form -->
 @code {
@@ -221,7 +221,7 @@
         else
         {
             Console.WriteLine(NavManager.BaseUri);
-            NavManager.NavigateTo("Login");
+            NavManager.NavigateTo(NavManager.BaseUri + "/Login", true);
         }
     }
 }

@@ -8,49 +8,62 @@
 <div class="wrapper">
     <div class="profile">
         <div class="content">
-            <h1>Edit Profile</h1>
-            <form action="">
+            <h1>Profile</h1>
+            <div action="">
                     <!-- Name -->
                 <fieldset>
                     <div class="grid-35">
-                        <label for="fname">First Name</label>
+                            <label for="lname">Full Name: @FullName</label>
                     </div>
                     <div class="grid-65">
-                        <input type="text" id="fname" tabindex="1" />
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div class="grid-35">
-                        <label for="lname">Last Name</label>
-                    </div>
-                    <div class="grid-65">
-                        <input type="text" id="lname" tabindex="2" />
+                        <a type="text" id="lname" tabindex="2" />
                     </div>
                 </fieldset>
                 <!-- Email -->
                 <fieldset>
                     <div class="grid-35">
-                        <label for="email">Email Address: @Email</label>
+                        <a for="email">Username: @Username</a>
                     </div>
                     <div class="grid-65">
-                        <input type="email" id="email" tabindex="6" />
+                        <a type="email" id="email" tabindex="6" />
                     </div>
                 </fieldset>
+                <fieldset>
+                    <div class="grid-35">
+                            <a for="email">DOB: @Date </a>
+                        </div>
+                        
+                </fieldset>
+                <fieldset>
+                    <div class="grid-35">
+                                <a for="email">Gender: @Gender</a>
+                            </div>
+                </fieldset>
+                <p>
+                        <button class="btnbtnprimary" onclick="window.location.href = '/home';">
+                                    Home
+                                </button>
+                            </p>
 
-            </form>
+            </div>
         </div>
 </div>
 </div>
 </body>
 @code {
     private string FullName { get; set; } = string.Empty;
-    private string Email { get; set; } = string.Empty;
+    private string Username { get; set; } = string.Empty;
+    private DateTime? Date { get; set; } 
+    private string Gender { get; set; } = string.Empty;
+
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
         if (UserService.User?.FullName != null) FullName = UserService.User?.FullName;
-        if (UserService.User?.Username != null) Email = UserService.User?.Username;
+        if (UserService.User?.Username != null) Username = UserService.User?.Username;
+        if (UserService.User?.Dob != null) Date = UserService.User?.Dob;
+        if (UserService.User?.Gender != null) Gender = UserService.User?.Gender;
     }
 
 }

@@ -145,7 +145,7 @@
   color: #000000;
   border: 2px;
   width: auto;
-  margin-left: -5px;
+  margin-left: 0px;
   box-sizing: border-box;
   font-size: 14px;
   outline: 0;
@@ -159,7 +159,7 @@
   width: 3%;
   border: 2px;
   width: auto;
-  margin-left: -5px;
+  margin-left: 0px;
   box-sizing: border-box;
   font-size: 14px;
   outline: 0;
