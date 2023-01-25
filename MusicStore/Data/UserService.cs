@@ -9,12 +9,12 @@ public class UserService
 {
     public UserSchema? User;
     
-    public async Task<HttpStatusCode> LoginAsync(string email, string password)
+    public async Task<HttpStatusCode> LoginAsync(string username, string password)
     {
         var db = new Database();
         await db.Database.EnsureCreatedAsync();
 
-        var user = db.Users.FirstOrDefault(x => string.Equals(x.Email, email, StringComparison.CurrentCultureIgnoreCase), null);
+        var user = db.Users.FirstOrDefault(x => string.Equals(x.Username, username, StringComparison.CurrentCultureIgnoreCase), null);
 
         if (user == null)
         {
@@ -31,13 +31,13 @@ public class UserService
         return HttpStatusCode.Accepted;
     }
 
-    public async Task<HttpStatusCode> RegisterAsync(string email, string password, string fullName, DateTime dob, string gender, string title)
+    public async Task<HttpStatusCode> RegisterAsync(string username, string password, string fullName, DateTime dob, string gender, string title)
     {
         Console.WriteLine(dob);
         var db = new Database();
         await db.Database.EnsureCreatedAsync();
         
-        if (db.Users.Any(x => x.Email.Trim().ToLower() == email.Trim().ToLower()))
+        if (db.Users.Any(x => x.Username.Trim().ToLower() == username.Trim().ToLower()))
         {
             return HttpStatusCode.Conflict;
         }
@@ -49,7 +49,7 @@ public class UserService
             Created = DateTime.Now,
             Id = db.Users.Count() + 1,
             Dob = dob,
-            Email = email,
+            Username = username.Trim(),
             FullName = fullName,
             Password = hashed,
             Salt = Encoding.UTF8.GetString(salt),

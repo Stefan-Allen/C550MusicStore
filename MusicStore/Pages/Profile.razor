@@ -50,7 +50,7 @@
     {
         base.OnInitialized();
         if (UserService.User?.FullName != null) FullName = UserService.User?.FullName;
-        if (UserService.User?.Email != null) Email = UserService.User?.Email;
+        if (UserService.User?.Username != null) Email = UserService.User?.Username;
     }
 
 }
