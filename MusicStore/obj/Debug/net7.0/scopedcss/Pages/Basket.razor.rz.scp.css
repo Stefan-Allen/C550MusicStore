@@ -150,9 +150,6 @@ h1[b-8ku1vmiwcx] {
     width: 50px;
     color: white;
     margin-right: 1em;
-    img
-
-{
     max-width: 100%;
 }
 
@@ -172,6 +169,10 @@ h1[b-8ku1vmiwcx] {
 .name[b-8ku1vmiwcx] {
     display: block;
     margin-bottom: 10px;
+    color: white;
+    text-decoration:none;
+    font-size: 24px;
+    font-weight: 500;
 
     @include respond-to(point2) {
         float: left;
@@ -192,6 +193,7 @@ h1[b-8ku1vmiwcx] {
     color: white;
     margin-right: 5px;
     font-weight: normal;
+
 }
 
 form[b-8ku1vmiwcx] {
@@ -208,24 +210,7 @@ form[b-8ku1vmiwcx] {
 }
 
 }
+    
 
-.totals[b-8ku1vmiwcx],
-.basket[b-8ku1vmiwcx] {
-    footer
 
-{
-    text-align: right;
-    margin-top: 10px;
-    form
 
-{
-    display: inline;
-    input
-
-{
-    margin-bottom: 10px;
-}
-
-}
-}
-}
