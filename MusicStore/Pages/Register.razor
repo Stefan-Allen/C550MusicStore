@@ -3,6 +3,7 @@
 @using System.Diagnostics
 @using System.Globalization
 @using System.Net
+@using System.Text.RegularExpressions
 
 @inject UserService _UserService
 @inject NavigationManager NavManager
@@ -179,7 +180,7 @@
                                 </select>
                             </p>
                             <p>
-                                <button class="btnbtnprimary" @onclick="RegisterAsync">
+                                <button class="btnbtnprimary" @onclick="RegisterFn">
                                     Register
                                 </button>
                             </p>
@@ -206,10 +207,15 @@
     private string Gender { get; set; } = string.Empty;
     private string Title { get; set; } = string.Empty;
 
-    private async Task RegisterAsync()
+    private void RegisterFn()
     {
+        if (!Regex.IsMatch(Email, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"))
+        {
+            return;
+        }
+        
         var parsedDob = DateTime.Parse($"{DOBMonth}-{DOBDay}-{DOBYear}", new CultureInfo("en-US"), DateTimeStyles.None);
-        var result = await _UserService.RegisterAsync(Email, Password, FullName, dob: parsedDob, Gender, Title);
+        var result = _UserService.RegisterAsync(Email, Password, FullName, dob: parsedDob, Gender, Title).GetAwaiter().GetResult();
 
     // Account Already Exists
         if (result == HttpStatusCode.Conflict)

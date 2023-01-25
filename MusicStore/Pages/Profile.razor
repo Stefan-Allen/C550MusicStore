@@ -1,4 +1,7 @@
 ﻿@page "/Profile"
+@using MusicStore.Data
+
+@inject UserService UserService
 
 
 <body class="BodyProfile">
@@ -27,7 +30,7 @@
                 <!-- Email -->
                 <fieldset>
                     <div class="grid-35">
-                        <label for="email">Email Address</label>
+                        <label for="email">Email Address: @Email</label>
                     </div>
                     <div class="grid-65">
                         <input type="email" id="email" tabindex="6" />
@@ -40,5 +43,14 @@
 </div>
 </body>
 @code {
+    private string FullName { get; set; } = string.Empty;
+    private string Email { get; set; } = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        if (UserService.User?.FullName != null) FullName = UserService.User?.FullName;
+        if (UserService.User?.Email != null) Email = UserService.User?.Email;
+    }
 
 }
