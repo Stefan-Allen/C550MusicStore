@@ -33,10 +33,11 @@ public class UserService
 
     public async Task<HttpStatusCode> RegisterAsync(string email, string password, string fullName, DateTime dob, string gender, string title)
     {
+        Console.WriteLine(dob);
         var db = new Database();
         await db.Database.EnsureCreatedAsync();
         
-        if (db.Users.Any(x => string.Equals(x.Email, email, StringComparison.CurrentCultureIgnoreCase)))
+        if (db.Users.Any(x => x.Email.Trim().ToLower() == email.Trim().ToLower()))
         {
             return HttpStatusCode.Conflict;
         }
@@ -51,7 +52,7 @@ public class UserService
             Email = email,
             FullName = fullName,
             Password = hashed,
-            Salt = salt.ToString()!,
+            Salt = Encoding.UTF8.GetString(salt),
             Gender = gender
         };
 

@@ -5,6 +5,7 @@
 @using System.Net
 
 @inject UserService _UserService
+@inject NavigationManager NavManager
 
 <!-- Login Form -->
 
@@ -65,18 +66,18 @@
                                 </select>
                                 <select class="dob2" name="gender" required="" asp-for="Jan" @bind="DOBMonth">
                                     <option value="">Month</option>
-                                    <option value="Jan">Jan</option>
-                                    <option value="Feb">Feb</option>
-                                    <option value="Mar">Mar</option>
-                                    <option value="Apr">Apr</option>
-                                    <option value="May">May</option>
-                                    <option value="Jun">Jun</option>
-                                    <option value="Jul">Jul</option>
-                                    <option value="Aug">Aug</option>
-                                    <option value="Sep">Sep</option>
-                                    <option value="Oct">Oct</option>
-                                    <option value="Nov">Nov</option>
-                                    <option value="Dec">Dec</option>
+                                    <option value="01">Jan</option>
+                                    <option value="02">Feb</option>
+                                    <option value="03">Mar</option>
+                                    <option value="04">Apr</option>
+                                    <option value="05">May</option>
+                                    <option value="06">Jun</option>
+                                    <option value="07">Jul</option>
+                                    <option value="08">Aug</option>
+                                    <option value="09">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
 
                                 </select>
                                 <select class="dob3" name="gender" required="" asp-for="2022" @bind="DOBYear">
@@ -178,7 +179,7 @@
                                 </select>
                             </p>
                             <p>
-                                <button type="submit" class="btnbtnprimary">
+                                <button class="btnbtnprimary" @onclick="RegisterAsync">
                                     Register
                                 </button>
                             </p>
@@ -207,16 +208,19 @@
 
     private async Task RegisterAsync()
     {
-        DateTime.TryParseExact($"{DOBMonth}-{DOBDay}-{DOBYear}", "MM-dd-yy", null, DateTimeStyles.None, out var parsedDob);
+        var parsedDob = DateTime.Parse($"{DOBMonth}-{DOBDay}-{DOBYear}", new CultureInfo("en-US"), DateTimeStyles.None);
         var result = await _UserService.RegisterAsync(Email, Password, FullName, dob: parsedDob, Gender, Title);
 
+    // Account Already Exists
         if (result == HttpStatusCode.Conflict)
         {
-            
+            Console.WriteLine("Ran");
         }
+    // Else Account Created Response
         else
         {
-            
+            Console.WriteLine(NavManager.BaseUri);
+            NavManager.NavigateTo(NavManager.BaseUri + "Login");
         }
     }
 }

@@ -1,4 +1,11 @@
 ﻿@page "/"
+@page "/Login"
+
+@using MusicStore.Data
+@using System.Net
+
+@inject UserService UserService;
+@inject NavigationManager NavManager
 
 <!-- Login Form -->
 
@@ -14,13 +21,13 @@
                     <div id="tableContainer-2" class="tableContainer-2">
                         <form method="post" class="login-form">
                             <p>
-                                <input class="email" required="" type="email" placeholder="Email" />
+                                <input class="email" required="" type="email" placeholder="Email" @bind="Email"/>
                             </p>
                             <p>
                                 <input class="password" required="" type="password" placeholder="Password" />
                             </p>
                             <p>
-                                <button type="submit" class="btnbtnprimary">
+                                <button class="btnbtnprimary" @onclick="LoginAsync">
                                     Sign In
                                 </button>
                             </p>
@@ -38,5 +45,27 @@
 </body>
 
 @code {
-    
+    private string Email { get; set; } = string.Empty;
+    private string Password { get; set; } = string.Empty;
+
+    public async void LoginAsync()
+    {
+        var response = await UserService.LoginAsync(Email, Password);
+
+        switch (response)
+        {
+            // User Account Does Not Exist
+            case HttpStatusCode.NotFound:
+                break;
+            // Invalid Password
+            case HttpStatusCode.Forbidden:
+                break;
+            // Correct Password
+            case HttpStatusCode.Accepted:
+                NavManager.NavigateTo("/Home");
+                break;
+            default:
+                break;
+        }
+    }
 }
