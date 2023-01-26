@@ -34,7 +34,7 @@
                             </p>
                             <p class="Style">
                                 <select class="dob1" name="gender" required="" asp-for="1" @bind="Artist">
-                                    <option value="">Select artist</option>
+                                    <option value=@DefaultArtist>Select artist</option>
                                     @foreach (ArtistSchema artist in ProductService.GetArtists())
                                     {
                                         <option value="@artist">@artist.Name</option>
@@ -66,12 +66,19 @@
     private string Genre { get; set; } = string.Empty;
     private string Price { get; set; } = string.Empty;
     private ArtistSchema Artist { get; set; }
+
+    private ArtistSchema DefaultArtist = new ArtistSchema
+    {
+        Id = 0,
+        ImageName = string.Empty,
+        Name = string.Empty
+    };
     
     private string RemovalName { get; set; } = string.Empty;
 
     private void OnAddProduct()
     {
-        if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Genre) || string.IsNullOrEmpty(Price))
+        if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Genre) || string.IsNullOrEmpty(Price) || Artist == DefaultArtist)
         {
             return;
         }
