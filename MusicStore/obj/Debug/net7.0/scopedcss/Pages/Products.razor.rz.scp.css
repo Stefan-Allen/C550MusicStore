@@ -1,17 +1,17 @@
 
 /* Login Form */
-.Body[b-5w7225dzdz] {
+.Body[b-oodlgt9a8w] {
     height: 100%;
     background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
 }
 
-.BackSquare[b-5w7225dzdz] {
+.BackSquare[b-oodlgt9a8w] {
     width: 360px;
     padding: 8% 0 0;
     margin: auto;
 }
 
-.form[b-5w7225dzdz] {
+.form[b-oodlgt9a8w] {
     border-radius: 10px;
     z-index: 1;
     background-color: rgb(255, 255, 255);
@@ -22,14 +22,14 @@
     box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0), 0 5px 5px 0 rgba(255, 255, 255, 0);
 }
 
-.tableContainer-1[b-5w7225dzdz] {
+.tableContainer-1[b-oodlgt9a8w] {
     width: 150%;
     display: table;
     margin-top: 20%;
     margin-left: -46%;
 }
 
-.LoginText[b-5w7225dzdz] {
+.LoginText[b-oodlgt9a8w] {
     color: rgb(50, 50, 50);
     font-size: 38px;
     font-weight: 500;
@@ -39,14 +39,14 @@
     margin-left: 195%;
 }
 
-.tableContainer-2[b-5w7225dzdz] {
+.tableContainer-2[b-oodlgt9a8w] {
     vertical-align: middle;
     display: table-cell;
     height: 100%;
     font-weight: 500;
 }
 
-.login-form[b-5w7225dzdz] {
+.login-form[b-oodlgt9a8w] {
     position: relative;
     z-index: 1;
     color: rgb(50, 50, 50);
@@ -57,7 +57,7 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.Style[b-5w7225dzdz] {
+.Style[b-oodlgt9a8w] {
     color: #000000;
     border: 2px;
     width: 125%;
@@ -70,7 +70,7 @@
     background: #f2f2f2;
 }
 
-.add[b-5w7225dzdz] {
+.add[b-oodlgt9a8w] {
     color: #000000;
     width: 125%;
     border: 10px;
@@ -83,7 +83,7 @@
     margin-top: 10px;
 }
 
-.search[b-5w7225dzdz] {
+.search[b-oodlgt9a8w] {
     color: #000000;
     width: 125%;
     border: 10px;
@@ -96,7 +96,7 @@
     margin-top: 10px;
 }
 
-.remove[b-5w7225dzdz] {
+.remove[b-oodlgt9a8w] {
     color: #000000;
     width: 125%;
     border: 10px;
@@ -109,7 +109,7 @@
     margin-top: 10px;
 }
 
-.btnbtnprimary[b-5w7225dzdz] {
+.btnbtnprimary[b-oodlgt9a8w] {
     color: rgb(255, 255, 255);
     border-radius: 5px;
     outline: 0;
@@ -123,14 +123,14 @@
     cursor: pointer;
 }
 
-.registered[b-5w7225dzdz] {
+.registered[b-oodlgt9a8w] {
     margin-top: 60px;
     color: black;
     margin-top: 10px;
 
 }
 
-.Home[b-5w7225dzdz] {
+.Home[b-oodlgt9a8w] {
     color: #2196f3;
     font-size: smaller;
 }

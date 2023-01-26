@@ -23,7 +23,7 @@
 
                     <div id="tableContainer-2" class="tableContainer-2">
                         <p>
-                            Add product
+                            @Message
                         </p>
                         <div method="post" class="login-form">
                             <p>
@@ -42,13 +42,13 @@
                                 </select>
                             </p>
                             
-                            <button class="btnbtnprimary">
+                            <button class="btnbtnprimary" @onclick = "OnAddProduct">
                                 Add product
                                 </button>
                                                             <p>
                                 <input class="remove" required="" type="text" placeholder="Remove" @bind="RemovalName"/>
                             </p>
-                            <button class="btnbtnprimary">
+                            <button class="btnbtnprimary" @onclick="OnRemoveProduct">
                                 Remove product
                             </button>
                             <a class="Home" href="/Home">Back home</a>
@@ -66,6 +66,7 @@
     private string Genre { get; set; } = string.Empty;
     private string Price { get; set; } = string.Empty;
     private string Artist { get; set; } = string.Empty;
+    private string Message { get; set; } = string.Empty;
 
     private string RemovalName { get; set; } = string.Empty;
 
@@ -73,11 +74,14 @@
     {
         if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Genre) || string.IsNullOrEmpty(Price) || string.IsNullOrEmpty(Artist))
         {
+
+            Message = "Empty value found";
             return;
         }
 
         if (!double.TryParse(Price, out var parsed))
         {
+            Message = "Invalid price";
             return;
         }
 
@@ -85,8 +89,10 @@
 
         if (response == HttpStatusCode.Conflict)
         {
-            
+            Message = "Product already exist";
+            return;
         }
+        Message = "Product created successfully";
     }
 
     private void OnRemoveProduct()
