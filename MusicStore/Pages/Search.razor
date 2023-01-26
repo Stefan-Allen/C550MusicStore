@@ -1,4 +1,8 @@
 ﻿@page "/Search"
+@using MusicStore.Data
+@using MusicStore.Schemas
+
+@inject ProductService ProductService
 
 <div class="topnav">
   <div class="search-container">
@@ -51,4 +55,19 @@
 
 @code {
 
+  private string Query { get; set; } = string.Empty;
+
+  private List<ProductSchema> Results { get; set; } = new();
+
+  protected override void OnInitialized()
+  {
+    base.OnInitialized();
+  }
+
+  private void OnSearch()
+  {
+    if (string.IsNullOrEmpty(Query)) return;
+
+    Results = ProductService.SearchProducts(Query.Trim()).ToList();
+  }
 }

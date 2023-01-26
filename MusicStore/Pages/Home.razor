@@ -1,4 +1,8 @@
 ﻿@page "/Home"
+@using MusicStore.Data
+@using MusicStore.Schemas
+
+@inject ProductService ProductServiceInstance
 
 <div class="container">
 	<h2 class="section-title">New Releases</h2>
@@ -60,4 +64,11 @@
 
 @code {
 
+	private List<ProductSchema> Products { get; set; }
+
+	protected override void OnInitialized()
+	{
+		base.OnInitialized();
+		Products = ProductServiceInstance.GetProducts().ToList();
+	}
 }

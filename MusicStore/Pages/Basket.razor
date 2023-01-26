@@ -1,6 +1,5 @@
 ﻿@page "/Basket"
 @using MusicStore.Data;
-@using MusicStore.Shared;
 
 @inject BasketService BasketService;
 
@@ -32,7 +31,7 @@
         <tfoot>
             <tr>
                 <th colspan="3" style="text-align:end">Total Cost</th>
-                <th>@totalCost.ToString("c")</th>
+                <th>@TotalCost.ToString("c")</th>
             </tr>
         </tfoot>
     </article>
@@ -41,7 +40,12 @@
 
 
 @code {
-    private double totalCost { get; set; }
+    private double TotalCost { get; set; }
 
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        TotalCost = BasketService.GetTotal();
+    }
 
 }

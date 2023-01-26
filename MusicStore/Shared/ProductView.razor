@@ -1,0 +1,16 @@
+﻿@using MusicStore.Schemas
+@using MusicStore.Data
+
+@inject BasketService BasketService;
+
+
+
+@code {
+    [Parameter]
+    public ProductSchema Item { get; set; }
+
+    public void IncreaseQuantity()
+    {
+        BasketService.AddProduct(Item);
+    }
+}

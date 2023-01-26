@@ -9,6 +9,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<BasketService>();
+builder.Services.AddSingleton<ProductService>();
 
 var app = builder.Build();
 
