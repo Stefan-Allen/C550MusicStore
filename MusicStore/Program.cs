@@ -10,6 +10,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<BasketService>();
 builder.Services.AddSingleton<ProductService>();
+builder.Services.AddSingleton<ArtistService>();
 
 var app = builder.Build();
 

@@ -14,13 +14,6 @@ public class ProductService
         return db.Products.ToArray();
     }
 
-    public List<ArtistSchema> GetArtists()
-    {
-        var db = new Database();
-
-        return db.Artists.ToList();
-    }
-
     public ProductSchema? FindProduct(string query)
     {
         var db = new Database();

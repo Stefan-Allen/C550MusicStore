@@ -7,6 +7,7 @@
 @inject UserService UserService;
 @inject NavigationManager NavManager;
 @inject ProductService ProductService;
+@inject ArtistService ArtistService;
 
 <!-- Login Form -->
 
@@ -35,14 +36,14 @@
                             <p class="Style">
                                 <select class="dob1" name="gender" required="" asp-for="1" @bind="Artist">
                                     <option value=@string.Empty>Select artist</option>
-                                    @foreach (ArtistSchema artist in ProductService.GetArtists())
+                                    @foreach (ArtistSchema artist in ArtistService.GetArtists())
                                     {
                                         <option value=@artist.Name>@artist.Name</option>
                                     }
                                 </select>
                             </p>
                             
-                            <button class="btnbtnprimary" @onclick = "OnAddProduct">
+                            <button class="btnbtnprimary" @onclick="OnAddProduct">
                                 Add product
                                 </button>
                                                             <p>
