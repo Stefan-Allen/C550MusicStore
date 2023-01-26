@@ -1,4 +1,4 @@
-﻿@page "/Artist"
+﻿@page "/Artists"
 
 @using MusicStore.Data
 @using System.Net
@@ -22,11 +22,11 @@
 
                     <div id="tableContainer-2" class="tableContainer-2">
                         <p>
-                            Add an artist
+                            @Message
                         </p>
                         <div method="post" class="login-form">
                             <p>
-                                <input class="add" required="" type="Add" placeholder="Add Artist" @bind="Artist" />
+                                <input class="add" required="" type="Add" placeholder="Artist Name" @bind="Artist" />
                             </p>
                             <button class="btnbtnprimary" @onclick="OnArtistAdd">
                                 Add Artist
@@ -47,11 +47,13 @@
 
 @code {
     private string Artist { get; set; } = string.Empty;
+    private string Message { get; set; } = string.Empty;
 
     private void OnArtistAdd()
     {
         if (string.IsNullOrWhiteSpace(Artist))
         {
+            Message = "Incorrect password";
             return;
         }
 
@@ -59,7 +61,8 @@
 
         if (response == HttpStatusCode.Conflict)
         {
-            
+            Message = "Incorrect password";
+            return;
         }
     }
 
@@ -67,6 +70,7 @@
     {
         if (string.IsNullOrWhiteSpace(Artist))
         {
+            Message = "Incorrect password";
             return;
         }
 
