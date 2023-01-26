@@ -18,7 +18,7 @@ ul {
     border-radius: 5px;
     margin-left: -10px;
     background: #941a1a;
-    width: 110%;
+    width: 105%;
     border: 0;
     padding: 15px;
     color: rgb(255, 255, 255);
@@ -40,6 +40,7 @@ ul {
     border-bottom: 1px solid rgba(255,255,255,.1);
     padding: 5px 0;
     margin-bottom: 20px;
+    margin-left: auto;
 }
 
 ul + .section-title {
@@ -79,7 +80,7 @@ ul + .section-title {
 }
 
 .album-card {
-    width: 33%;
+    width: 20%;
     cursor: pointer;
     display: inline-block;
 

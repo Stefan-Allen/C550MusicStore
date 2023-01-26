@@ -6,12 +6,12 @@
 
 <div class="topnav">
   <div class="search-container">
-    <form action="/action_page.php">
-            <form action="/form/submit" method="GET">
-                <input type="text" name="text" class="search" placeholder="Search here!">
-                <input type="submit" name="submit" class="submit" value="Search">
-            </form>
-    </form>
+    <div action="/action_page.php">
+            <div>
+                <input type="text" name="text" class="search" placeholder="Search here!" @bind ="Query">
+                <input type="submit" name="submit" class="submit" value="Search" @onclick="OnSearch">
+            </div>
+    </div>
   </div>
 </div>
 

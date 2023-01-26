@@ -9,7 +9,7 @@
 	<ul class="albums-list">
 		@foreach(ProductSchema item in Products)
 {
-    <ProductView product="@item"></ProductView>
+    <ProductView Item="@item"></ProductView>
 }
 	</ul>
 	</div>
@@ -138,5 +138,20 @@
 	{
 		base.OnInitialized();
 		Products = ProductServiceInstance.GetProducts().ToList();
+		Products.Add(new ProductSchema
+			{
+				Id = 2,
+				Artist = new ArtistSchema
+				{
+					Id = 5,
+					ImageName = "kodkodkdok.jpg",
+					Name = "Obi Wan"
+				},
+				Genre = "Rock",
+				ImageName = "Dusty.jpg",
+				Name = "Song Test",
+				Price = 2.99
+			});
 	}
+
 }

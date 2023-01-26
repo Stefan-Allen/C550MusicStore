@@ -204,3 +204,4 @@ D:\Development\University\C550\MusicPlayer\MusicStore\obj\Debug\net7.0\refint\Mu
 D:\Development\University\C550\MusicPlayer\MusicStore\obj\Debug\net7.0\MusicStore.pdb
 D:\Development\University\C550\MusicPlayer\MusicStore\obj\Debug\net7.0\MusicStore.genruntimeconfig.cache
 D:\Development\University\C550\MusicPlayer\MusicStore\obj\Debug\net7.0\ref\MusicStore.dll
+C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Shared\ProductView.razor.rz.scp.css
