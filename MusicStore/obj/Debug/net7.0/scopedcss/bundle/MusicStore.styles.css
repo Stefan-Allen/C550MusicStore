@@ -215,6 +215,143 @@ form[b-8ku1vmiwcx] {
 
 
 
+/* _content/MusicStore/Pages/CreateDeleteProduct.razor.rz.scp.css */
+
+/* Login Form */
+.Body[b-helk2q7l2y] {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
+}
+
+.BackSquare[b-helk2q7l2y] {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.form[b-helk2q7l2y] {
+    border-radius: 10px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0), 0 5px 5px 0 rgba(255, 255, 255, 0);
+}
+
+.tableContainer-1[b-helk2q7l2y] {
+    width: 150%;
+    display: table;
+    margin-top: 20%;
+    margin-left: -46%;
+}
+
+.LoginText[b-helk2q7l2y] {
+    color: rgb(50, 50, 50);
+    font-size: 38px;
+    font-weight: 500;
+    height: 100px;
+    width: 100px;
+    margin-top: -65%;
+    margin-left: 195%;
+}
+
+.tableContainer-2[b-helk2q7l2y] {
+    vertical-align: middle;
+    display: table-cell;
+    height: 100%;
+    font-weight: 500;
+}
+
+.login-form[b-helk2q7l2y] {
+    position: relative;
+    z-index: 1;
+    color: rgb(50, 50, 50);
+    max-width: 360px;
+    margin: 0 auto 20px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.Style[b-helk2q7l2y] {
+    color: #000000;
+    border: 2px;
+    width: 125%;
+    margin-left: -25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: 0;
+    padding: 7.5px;
+    margin-top: 10px;
+    background: #f2f2f2;
+}
+
+.add[b-helk2q7l2y] {
+    color: #000000;
+    width: 125%;
+    border: 10px;
+    margin-left: -25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: 0;
+    background: #f2f2f2;
+    padding: 12.5px;
+    margin-top: 10px;
+}
+
+.search[b-helk2q7l2y] {
+    color: #000000;
+    width: 125%;
+    border: 10px;
+    margin-left: -25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: 0;
+    background: #f2f2f2;
+    padding: 12.5px;
+    margin-top: 10px;
+}
+
+.remove[b-helk2q7l2y] {
+    color: #000000;
+    width: 125%;
+    border: 10px;
+    margin-left: -25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: 0;
+    background: #f2f2f2;
+    padding: 12.5px;
+    margin-top: 10px;
+}
+
+.btnbtnprimary[b-helk2q7l2y] {
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    outline: 0;
+    margin-left: -25px;
+    background: #941a1a;
+    width: 125%;
+    border: 0;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.registered[b-helk2q7l2y] {
+    margin-top: 60px;
+    color: black;
+    margin-top: 10px;
+
+}
+
+.Home[b-helk2q7l2y] {
+    color: #2196f3;
+    font-size: smaller;
+}
 /* _content/MusicStore/Pages/Home.razor.rz.scp.css */
 
 body[b-s0vg48o4ts] {
@@ -1463,6 +1600,143 @@ span.logo-part[b-6mzorskmac] {
     }
 }
 
+/* _content/MusicStore/Pages/SelectArtist.razor.rz.scp.css */
+
+/* Login Form */
+.Body[b-5w7225dzdz] {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
+}
+
+.BackSquare[b-5w7225dzdz] {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.form[b-5w7225dzdz] {
+    border-radius: 10px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0), 0 5px 5px 0 rgba(255, 255, 255, 0);
+}
+
+.tableContainer-1[b-5w7225dzdz] {
+    width: 150%;
+    display: table;
+    margin-top: 20%;
+    margin-left: -46%;
+}
+
+.LoginText[b-5w7225dzdz] {
+    color: rgb(50, 50, 50);
+    font-size: 38px;
+    font-weight: 500;
+    height: 100px;
+    width: 100px;
+    margin-top: -65%;
+    margin-left: 195%;
+}
+
+.tableContainer-2[b-5w7225dzdz] {
+    vertical-align: middle;
+    display: table-cell;
+    height: 100%;
+    font-weight: 500;
+}
+
+.login-form[b-5w7225dzdz] {
+    position: relative;
+    z-index: 1;
+    color: rgb(50, 50, 50);
+    max-width: 360px;
+    margin: 0 auto 20px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.Style[b-5w7225dzdz] {
+    color: #000000;
+    border: 2px;
+    width: 125%;
+    margin-left: -25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: 0;
+    padding: 7.5px;
+    margin-top: 10px;
+    background: #f2f2f2;
+}
+
+.add[b-5w7225dzdz] {
+    color: #000000;
+    width: 125%;
+    border: 10px;
+    margin-left: -25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: 0;
+    background: #f2f2f2;
+    padding: 12.5px;
+    margin-top: 10px;
+}
+
+.search[b-5w7225dzdz] {
+    color: #000000;
+    width: 125%;
+    border: 10px;
+    margin-left: -25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: 0;
+    background: #f2f2f2;
+    padding: 12.5px;
+    margin-top: 10px;
+}
+
+.remove[b-5w7225dzdz] {
+    color: #000000;
+    width: 125%;
+    border: 10px;
+    margin-left: -25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: 0;
+    background: #f2f2f2;
+    padding: 12.5px;
+    margin-top: 10px;
+}
+
+.btnbtnprimary[b-5w7225dzdz] {
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    outline: 0;
+    margin-left: -25px;
+    background: #941a1a;
+    width: 125%;
+    border: 0;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.registered[b-5w7225dzdz] {
+    margin-top: 60px;
+    color: black;
+    margin-top: 10px;
+
+}
+
+.Home[b-5w7225dzdz] {
+    color: #2196f3;
+    font-size: smaller;
+}
 /* _content/MusicStore/Shared/MainLayout.razor.rz.scp.css */
 .page[b-9h71sga2q3] {
     position: relative;

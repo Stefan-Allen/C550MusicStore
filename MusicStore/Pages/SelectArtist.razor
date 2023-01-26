@@ -1,0 +1,66 @@
+﻿@page "/SelectArtist"
+
+@using MusicStore.Data
+@using System.Net
+
+@inject UserService UserService;
+@inject NavigationManager NavManager
+
+<!-- Login Form -->
+
+<body class="Body">
+    <div>
+
+        <div class="BackSquare">
+            <div class="form">
+
+                <div id="tableContainer-1" class="tableContainer-1">
+                    <div class="LoginText">
+                        BNUify
+                    </div>
+
+                    <div id="tableContainer-2" class="tableContainer-2">
+                        <p>
+                            Add product
+                        </p>
+                        <div method="post" class="login-form">
+                            <p>
+                                <input class="add" required="" type="text" placeholder="Name" @bind="Name" />
+                                <input class="add" required="" type="text" placeholder="Genre" @bind="Genre" />
+                                <input class="add" required="" type="text" placeholder="Price" @bind="Price" />
+                                
+                            </p>
+
+                           
+                            
+                                    <p class="Style">
+                                        <select class="dob1" name="gender" required="" asp-for="1">
+                                    <option value="artist">Select artist</option>
+                                        </select>
+                                    </p>
+
+ 
+                            <button class="btnbtnprimary">
+                                Add product
+                                </button>
+                                                            <p>
+                                <input class="remove" required="" type="text" placeholder="Remove" />
+                            </p>
+                            <button class="btnbtnprimary">
+                                Remove product
+                            </button>
+                            <a class="Home" href="/Home">Back home</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@code {
+    private string Name { get; set; } = string.Empty;
+    private string Genre { get; set; } = string.Empty;
+    private string Price { get; set; } = string.Empty;
+}

@@ -1,0 +1,57 @@
+﻿@page "/CreateDeleteProduct"
+
+@using MusicStore.Data
+@using System.Net
+
+@inject UserService UserService;
+@inject NavigationManager NavManager
+
+<!-- Login Form -->
+
+<body class="Body">
+    <div>
+
+        <div class="BackSquare">
+            <div class="form">
+
+                <div id="tableContainer-1" class="tableContainer-1">
+                    <div class="LoginText">
+                        BNUify
+                    </div>
+
+                    <div id="tableContainer-2" class="tableContainer-2">
+                        <p>
+                            Create or remove a product
+                        </p>
+                        <div method="post" class="login-form">
+                            <p>
+                                <input class="add" required="" type="Add" placeholder="Add" @bind="Add" />
+                                <input class="add" required="" type="Add" placeholder="Add" @bind="Add" />
+                                <input class="add" required="" type="Add" placeholder="Add" @bind="Add" />
+                                
+                            </p>
+                            <button class="btnbtnprimary">
+                                    Add product
+                                </button>
+                            <p>
+                                <input class="remove" required="" type="remove" placeholder="remove" @bind="Add" />
+                            </p>
+                            <button class="btnbtnprimary">
+                                Remove product
+                            </button>
+                          
+                            <a class="Home" href="/Home">Back home</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@code {
+    private string Add { get; set; } = string.Empty;
+    private string Remove { get; set; } = string.Empty;
+    private string Artist { get; set; } = string.Empty;
+}
