@@ -20,7 +20,7 @@ public class ProductService
         db.Database.EnsureCreated();
 
        return db.Products.FirstOrDefault(
-            p => p != null && string.Equals(p.Name, query.Trim(), StringComparison.CurrentCultureIgnoreCase), null);
+            p => p != null && p.Name.ToLower().Trim() == query.ToLower().Trim(), null);
     }
 
     public ProductSchema[] SearchProducts(string query)
@@ -29,8 +29,8 @@ public class ProductService
 
         db.Database.EnsureCreated();
 
-        var results = db.Products.Where(p => string.Equals(p.Name.Trim(), query.Trim(), StringComparison.CurrentCultureIgnoreCase)).ToArray();
+        var results = db.Products.Where(p => p.Name.ToLower().Trim().Contains(query.ToLower().Trim())).ToArray();
 
-        return results != Array.Empty<ProductSchema>() ? results : db.Products.Where(p => String.Equals(p.Artist.Name.Trim(), query.Trim(), StringComparison.CurrentCultureIgnoreCase)).ToArray();
+        return results != Array.Empty<ProductSchema>() ? results : db.Products.Where(p => p.Artist.Name.ToLower().Trim() == query.ToLower().Trim()).ToArray();
     }
 }
