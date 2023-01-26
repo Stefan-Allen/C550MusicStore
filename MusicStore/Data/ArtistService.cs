@@ -10,10 +10,10 @@ public class ArtistService
         var db = new Database();
 
         if (db.Artists.Any(a => a.Name.ToLower().Trim() == name.ToLower().Trim())) return HttpStatusCode.Conflict;
-
+        var count = !db.Artists.Any() ? 0 : db.Artists.Max(a => a.Id);
         db.Artists.Add(new ArtistSchema()
         {
-            Id = db.Artists.Max(a => a.Id) + 1,
+            Id =  count + 1,
             ImageName = string.Empty,
             Name = name
         });
