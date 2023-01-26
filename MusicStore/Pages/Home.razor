@@ -5,59 +5,127 @@
 @inject ProductService ProductServiceInstance
 
 <div class="container">
-	<h2 class="section-title">New Releases</h2>
+	<h2 class="section-title">Products</h2>
 	<ul class="albums-list">
-		<li class="album-card">
-			<img class="image" src="/th.jpg" alt="The Hunting Party" />
-			<div class="album-info">
-				<h3 class="name">The Hunting Party</h3>
-				<p class="meta">Linkin Park - 2014</p>
-			</div>
-			<div class="album-page">
-				<div class="wrapper">
-					<div class="album-header">
-						<div class="header-album">
-							<div class="info">
-							</div>
-							<div class="header-contollers">
-								<span class="cart">add to the cart</span>
-								<button class="button">$1.95</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<!-- card -->
-		<li class="album-card">
-			<img class="image" src="/th.jpg" alt="Living Things" />
-			<div class="album-info">
-				<h3 class="name">Living Things</h3>
-				<p class="meta">Linkin Park - 2012</p>
-			</div>
-			<div class="album-page"></div>
-		</li>
-		<!-- card -->
+		@foreach(ProductSchema item in Products)
+{
+    <ProductView product="@item"></ProductView>
+}
 	</ul>
+	</div>
+	
+
 	<!-- list-cards -->
-	<h2 class="section-title">Best for Your</h2>
+	<div>
+	<h2 class="section-title" style="margin-left: 10px";>Genre </h2>
 	<ul class="albums-list">
 		<li class="album-card -small">
 			<img class="image" src="/th.jpg" alt="Minutes to Midnight" />
 			<div class="album-info">
-				<h3 class="name">Minutes to Midnight</h3>
-				<p class="meta">Linkin Park - 2007</p>
+				<h3 class="name">Blues Music</h3>
+				<p class="meta"></p>
+				<p>
+					<button class="btnbtnprimary">
+						Search for Blues Music
+					</button>
+				</p>
+			</div>
+		</li>
+		<!-- card -->
+		<li class="album-card -small">
+			<img class="image" src="/th.jpg" alt="Genre" />
+			<div class="album-info">
+				<h3 class="name">Jazz Music</h3>
+				<p class="meta"></p>
+				<p>
+					<button class="btnbtnprimary">
+						Search for Jazz Music
+					</button>
+				</p>
+			</div>
+		</li>
+	</ul>
+<ul class="albums-list">
+	<li class="album-card -small">
+			<img class="image" src="/th.jpg" alt="Genre" />
+		<div class="album-info">
+			<h3 class="name">Rock Music</h3>
+			<p class="meta"></p>
+			<p>
+				<button class="btnbtnprimary">
+						Search for Rock Music
+				</button>
+			</p>
+		</div>
+	</li>
+	<!-- card -->
+	<li class="album-card -small">
+			<img class="image" src="/th.jpg" alt="Genre" />
+		<div class="album-info">
+				<h3 class="name">Country Music</h3>
+			<p class="meta"></p>
+			<p>
+				<button class="btnbtnprimary">
+						Search for Country Music
+				</button>
+			</p>
+		</div>
+	</li>
+</ul>
+<ul class="albums-list">
+		<li class="album-card -small">
+			<img class="image" src="/th.jpg" alt="Genre" />
+			<div class="album-info">
+				<h3 class="name">Dance Music</h3>
+				<p class="meta"></p>
+				<p>
+					<button class="btnbtnprimary">
+						Search for Dance Music
+					</button>
+				</p>
 			</div>
 		</li>
 		<!-- card -->
 		<li class="album-card -small">
 			<img class="image" src="/th.jpg" alt="Collisiona Course" />
 			<div class="album-info">
-				<h3 class="name">Collision Course</h3>
-				<p class="meta">Linkin Park - 2004</p>
+				<h3 class="name">Pop Music</h3>
+				<p class="meta"></p>
+				<p>
+					<button class="btnbtnprimary">
+						Search for Pop Music
+					</button>
+				</p>
 			</div>
 		</li>
 	</ul>
+<ul class="albums-list">
+	<li class="album-card -small">
+		<img class="image" src="/th.jpg" alt="Minutes to Midnight" />
+		<div class="album-info">
+				<h3 class="name">Classical Music</h3>
+			<p class="meta"></p>
+			<p>
+				<button class="btnbtnprimary">
+						Search for Classical Music
+				</button>
+			</p>
+		</div>
+	</li>
+	<!-- card -->
+	<li class="album-card -small">
+		<img class="image" src="/th.jpg" alt="Collisiona Course" />
+		<div class="album-info">
+				<h3 class="name">Rap Music</h3>
+			<p class="meta"></p>
+			<p>
+				<button class="btnbtnprimary">
+						Search for Rap Music
+				</button>
+			</p>
+		</div>
+	</li>
+</ul>
 </div>
 
 

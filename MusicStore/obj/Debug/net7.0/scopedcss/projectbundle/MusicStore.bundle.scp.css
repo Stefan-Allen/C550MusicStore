@@ -231,6 +231,20 @@ ul[b-s0vg48o4ts] {
     list-style: none;
 }
 
+.btnbtnprimary[b-s0vg48o4ts] {
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: -10px;
+    background: #941a1a;
+    width: 110%;
+    border: 0;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
 .container[b-s0vg48o4ts] {
     width: 100%;
     padding: 16px;
@@ -253,6 +267,7 @@ ul + .section-title[b-s0vg48o4ts] {
 .name[b-s0vg48o4ts] {
     font-weight: 300;
     font-size: 1.4em;
+    font-weight: 500;
 }
 
 .meta[b-s0vg48o4ts] {
@@ -1351,7 +1366,7 @@ span.logo-part[b-6mzorskmac] {
 .topnav[b-f5pwtwigw7] {
     overflow: hidden;
     background-color: #e9e9e9;
-    height: 17.5%;
+    height: 60%;
 }
 
     .topnav a[b-f5pwtwigw7] {
@@ -1400,6 +1415,11 @@ span.logo-part[b-6mzorskmac] {
         .topnav .search-container button:hover[b-f5pwtwigw7] {
             background: #ccc;
         }
+
+.section-title[b-f5pwtwigw7] {
+    color: white;
+    margin-top: 10px;
+}
 
 @media screen and (max-width: 600px) {
     .topnav .search-container[b-f5pwtwigw7] {
