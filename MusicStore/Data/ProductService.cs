@@ -46,9 +46,11 @@ public class ProductService
 
         var artist = db.Artists.First(a => a.Name.ToLower().Trim() == artistName.ToLower().Trim());
 
+        var count = !db.Products.Any() ? 0 : db.Products.Max(x => x.Id);
+        
         db.Products.Add(new ProductSchema
         {
-            Id = db.Products.Max(x => x.Id) + 1,
+            Id = count,
             Artist = artist,
             Name = name,
             Genre = genre,
