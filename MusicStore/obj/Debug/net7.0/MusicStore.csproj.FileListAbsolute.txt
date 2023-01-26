@@ -208,3 +208,5 @@ C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Deb
 D:\Development\University\C550\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Shared\ProductView.razor.rz.scp.css
 C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\SelectArtist.razor.rz.scp.css
 C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\CreateDeleteProduct.razor.rz.scp.css
+D:\Development\University\C550\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\CreateDeleteProduct.razor.rz.scp.css
+D:\Development\University\C550\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\Products.razor.rz.scp.css

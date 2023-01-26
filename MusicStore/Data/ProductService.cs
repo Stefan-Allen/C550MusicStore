@@ -42,7 +42,7 @@ public class ProductService
         return results != Array.Empty<ProductSchema>() ? results : db.Products.Where(p => p.Artist.Name.ToLower().Trim() == query.ToLower().Trim()).ToArray();
     }
 
-    public HttpStatusCode AddProduct(ArtistSchema artist, string name, string genre, string imageName, double price)
+    public HttpStatusCode AddProduct(string artistName, string name, string genre, string imageName, double price)
     {
         var db = new Database();
 
@@ -50,6 +50,8 @@ public class ProductService
 
         if (db.Products.Any(
                 p => p.Name.ToLower().Trim() == name.ToLower().Trim())) return HttpStatusCode.Conflict;
+
+        var artist = db.Artists.First(a => a.Name.ToLower().Trim() == artistName.ToLower().Trim());
 
         db.Products.Add(new ProductSchema
         {
