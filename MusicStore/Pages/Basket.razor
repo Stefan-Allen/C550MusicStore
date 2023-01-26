@@ -1,56 +1,47 @@
 ﻿@page "/Basket"
+@using MusicStore.Data;
+@using MusicStore.Shared;
+
+@inject BasketService BasketService;
 
 <section>
     <h1 class="basket">Basket</h1>
 
+    <h3>You have @BasketService.Products.Count items in your shopping cart</h3>
+
+    <table>
     <article class="product">
         <div class="info">
             <a class="name">Song Name</a>
 
             <div class="data-group">
-                <span class="data">
-                    <strong>Price:</strong>&pound;3.86
-                </span>
-
-                <span class="data">
-                    <strong>Qty:</strong>1
-                </span>
-
-                <span class="data">
-                    <strong>Total:</strong>&pound;3.86
-                </span>
+         <tr>
+            <th>Name</th>
+            <th class="data">Quantity</th>
+            <th class="data">Price</th>
+            <th class="data">Cost</th>
+            <th>Actions</th>
+        </tr>
 
             </div>
         </div>
-
-    </article>
-
-</section>
-
-
-<section class="totals">
-    <h2 class="totals">Totals</h2>
-    <table class="table table-condensed table-striped cart-totals">
-
-        <tbody>
+            @foreach (var keyValuePair in BasketService.Products)
+        {
+            <BasketItem Item="@keyValuePair.Key" Quantity ="@keyValuePair.Value"></BasketItem> 
+        }
+        <tfoot>
             <tr>
-                <th>Song Name</th>
-                <td>&pound;19.30</td>
+                <th colspan="3" style="text-align:end">Total Cost</th>
+                <th>@totalCost.ToString("c")</th>
             </tr>
-         <tr>
-            <th>Grand Total</th>
-            <td>&pound;19.30</td>
-         </tr>
-        </tbody>
-    </table>
-
-    <footer>
-        <form action="/basket/update" method="post">
-            <input class="btn" type="submit" value="Go to Checkout" />
-        </form>
-    </footer>
+        </tfoot>
+    </article>
+</table>
 </section>
+
 
 @code {
+    private double totalCost { get; set; }
+
 
 }

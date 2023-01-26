@@ -1,0 +1,57 @@
+﻿@using MusicStore.Data;
+@using MusicStore.Schemas;
+
+@inject BasketService BasketService;
+<tr>
+        <td>@Item.Name</td>
+        <td class="text-center">@Quantity</td>
+        <td class="text-center">@Item.Price.ToString("c")</td>
+        <td class="text-center">@Cost().ToString("c")</td>
+        <td>
+            <button class="btn btn-success" title="Increase"
+                @onclick="IncreaseQuantity"
+            style="background-color:orange" type="button">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+            </button>
+
+            <button class="btn btn-success" title="Decrease"
+                @onclick="DecreaseQuantity"
+            style="background-color:red" type="button">
+            <i class="bi bi-arrow-down-circle-fill"></i>
+            </button>
+
+            <button class="btn btn-success" title="Remove"
+                @onclick="RemoveItem"
+            style="background-color:darkcyan" type="button">
+                <i class="bi bi-trash-fill"></i>
+            </button>
+    </td>
+    </tr>
+
+@code {
+    [Parameter]
+    public ProductSchema Item { get; set; } 
+
+    [Parameter]
+    public int Quantity { get; set; }
+
+    public double Cost()
+    {
+        return Item.Price * Quantity;
+    }
+
+    public void IncreaseQuantity()
+    {
+        BasketService.AddProduct(Item);
+    }
+
+    public void DecreaseQuantity()
+    {
+        BasketService.DecreaseProduct(Item);
+    }
+
+    public void RemoveItem()
+    {
+        BasketService.RemoveProduct(Item);
+    }
+}
