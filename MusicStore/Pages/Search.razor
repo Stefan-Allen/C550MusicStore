@@ -20,7 +20,7 @@
 	<ul class="albums-list">
 		@foreach(ProductSchema item in Results)
 {
-    <ProductView product="@item"></ProductView>
+    <ProductView Item="@item"></ProductView>
 }
 	</ul>
 	</div>
@@ -34,6 +34,21 @@
   protected override void OnInitialized()
   {
     base.OnInitialized();
+    
+    Results.Add(new ProductSchema
+    {
+      Id = 2,
+      Artist = new ArtistSchema
+      {
+        Id = 5,
+        ImageName = "kodkodkdok.jpg",
+        Name = "Obi Wan"
+      },
+      Genre = "Rock",
+      ImageName = "Dusty.jpg",
+      Name = "Song Test",
+      Price = 2.99
+    });
   }
 
   private void OnSearch()
