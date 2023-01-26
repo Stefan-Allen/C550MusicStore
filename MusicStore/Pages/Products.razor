@@ -1,10 +1,12 @@
-﻿@page "/SelectArtist"
+﻿@page "/Products"
 
 @using MusicStore.Data
 @using System.Net
+@using MusicStore.Schemas
 
 @inject UserService UserService;
-@inject NavigationManager NavManager
+@inject NavigationManager NavManager;
+@inject ProductService ProductService;
 
 <!-- Login Form -->
 
@@ -30,21 +32,21 @@
                                 <input class="add" required="" type="text" placeholder="Price" @bind="Price" />
                                 
                             </p>
-
-                           
+                            <p class="Style">
+                                <select class="dob1" name="gender" required="" asp-for="1" @bind="Artist">
+                                    <option value="">Select artist</option>
+                                    @foreach (ArtistSchema artist in ProductService.GetArtists())
+                                    {
+                                        <option value="@artist">@artist.Name</option>
+                                    }
+                                </select>
+                            </p>
                             
-                                    <p class="Style">
-                                        <select class="dob1" name="gender" required="" asp-for="1">
-                                    <option value="artist">Select artist</option>
-                                        </select>
-                                    </p>
-
- 
                             <button class="btnbtnprimary">
                                 Add product
                                 </button>
                                                             <p>
-                                <input class="remove" required="" type="text" placeholder="Remove" />
+                                <input class="remove" required="" type="text" placeholder="Remove" @bind="RemovalName"/>
                             </p>
                             <button class="btnbtnprimary">
                                 Remove product
@@ -63,4 +65,37 @@
     private string Name { get; set; } = string.Empty;
     private string Genre { get; set; } = string.Empty;
     private string Price { get; set; } = string.Empty;
+    private ArtistSchema Artist { get; set; }
+    
+    private string RemovalName { get; set; } = string.Empty;
+
+    private void OnAddProduct()
+    {
+        if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Genre) || string.IsNullOrEmpty(Price))
+        {
+            return;
+        }
+
+        if (!double.TryParse(Price, out var parsed))
+        {
+            return;
+        }
+
+        var response = ProductService.AddProduct(Artist, Name, Genre, string.Empty, parsed);
+
+        if (response == HttpStatusCode.Conflict)
+        {
+            
+        }
+    }
+
+    private void OnRemoveProduct()
+    {
+        var response = ProductService.RemoveProduct(RemovalName);
+
+        if (response == HttpStatusCode.NotFound)
+        {
+            
+        }
+    }
 }
