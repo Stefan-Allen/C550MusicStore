@@ -9,89 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MusicStore
 build_property.RootNamespace = MusicStore
-build_property.ProjectDir = C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\
+build_property.ProjectDir = D:\Development\University\C550\MusicPlayer\MusicStore\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore
+build_property.MSBuildProjectDirectory = D:\Development\University\C550\MusicPlayer\MusicStore
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/App.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Shared/SurveyPrompt.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/_Imports.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Artists.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Artists.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aXN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-v5zy4ezmb7
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Basket.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Basket.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFza2V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-8ku1vmiwcx
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Checkout.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Checkout.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rtlorhvf94
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Genre.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Genre.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-v2vx6tswb0
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Home.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-s0vg48o4ts
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Login.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-zj5ggrvo40
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Orders.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Orders.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-g811ggwsqq
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Products.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Products.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-oodlgt9a8w
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Profile.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Profile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-6mzorskmac
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Register.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-k31uor7rge
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Search.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Search.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-f5pwtwigw7
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Shared/BasketItem.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Shared/BasketItem.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJhc2tldEl0ZW0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-a5vpgefgmh
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Shared/MainLayout.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-9h71sga2q3
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Shared/NavMenu.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-qqt4bte5pa
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Shared/ProductView.razor]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Shared/ProductView.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFByb2R1Y3RWaWV3LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-jc083i9303
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/Error.cshtml]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stefa/OneDrive/Documents/AirChat/AirChat/MusicPlayer/MusicStore/Pages/_Host.cshtml]
+[D:/Development/University/C550/MusicPlayer/MusicStore/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

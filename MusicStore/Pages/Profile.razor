@@ -61,25 +61,33 @@
 </div>
 </div>
 @code {
+    // Holds FullName String
     private string FullName { get; set; } = string.Empty;
+    // Holds Username String
     private string Username { get; set; } = string.Empty;
+    // Holds User DOB
     private DateTime? Date { get; set; } 
+    // Holds User Gender
     private string Gender { get; set; } = string.Empty;
 
-
+    // Runs on page load
     protected override void OnInitialized()
     {
-        
+        // If user is null means user is not autheticated so returns to login page using Navigation Manager
         if (UserService.User == null)
         {
             NavManager.NavigateTo("Login");
             return;
         }
-        base.OnInitialized();
+        
+        // Gets all of users information if not null
         if (UserService.User?.FullName != null) FullName = UserService.User?.FullName;
         if (UserService.User?.Username != null) Username = UserService.User?.Username;
         if (UserService.User?.Dob != null) Date = UserService.User?.Dob;
         if (UserService.User?.Gender != null) Gender = UserService.User?.Gender;
+        
+        // Runs Default OnInitialized Function
+        base.OnInitialized();
     }
 
 }

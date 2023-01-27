@@ -48,14 +48,27 @@
     </div>
 
 @code {
+    // Holds the Email Input - Binded
     private string Email { get; set; } = string.Empty;
+    // Holds the Password Input - Binded
     private string Password { get; set; } = string.Empty;
+    // Holds the Message Responses
     private string Message { get; set; } = string.Empty;
 
-    public void LoginFn()
+    // Runs when the login button is pressed
+    private void LoginFn()
     {
+        // Checks if Email and Password both have values if not sets message and returns
+        if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
+        {
+            Message = "Missing required input";
+            return;
+        }
+        
+        // Attempts to login using the Username and password inputed
         var response = UserService.LoginAsync(Email, Password).GetAwaiter().GetResult();
 
+        // Check the response from login and runs appropriate code
         switch (response)
         {
             // User Account Does Not Exist
@@ -69,8 +82,6 @@
             // Correct Password
             case HttpStatusCode.Accepted:
                 NavManager.NavigateTo("/Home");
-                break;
-            default:
                 break;
         }
     }

@@ -51,17 +51,23 @@
 
 
 @code {
+    // Holds the total cost for the Basket
     private double TotalCost { get; set; }
 
+    // Runs on page load to load data
     protected override void OnInitialized()
     {
+        // If user is null means user is not autheticated so returns to login page using Navigation Manager
         if (UserService.User == null)
         {
             NavManager.NavigateTo("Login");
             return;
         }
-        base.OnInitialized();
+        
+        // Gets the total of the Basket from the Basket Service
         TotalCost = BasketService.GetTotal();
+        
+        // Runs The Default OnInitialise Function
+        base.OnInitialized();
     }
-
 }

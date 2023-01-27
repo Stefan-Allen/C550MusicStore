@@ -17,7 +17,7 @@
     <a href="/Orders">Orders</a>
     <div class="topnav">
         <div class="search-container">
-            <div action="/action_page.php">
+            <div>
                 <div>
                     <input type="text" name="text" class="search" placeholder="Search here!"  />
                     <input type="submit" name="submit" class="submit" value="Search" />
@@ -40,20 +40,27 @@
 </div>
 
 @code {
+    // Holds Genre Input From Link
    [Parameter]
    public string GenreString { get; set; }
-   
+    
+   // Holds all the products in that genre
    private ProductSchema[] Products { get; set; }
    
-
+    // Runs on page load
    protected override void OnInitialized()
    {
+        // If user is null means user is not autheticated so returns to login page using Navigation Manager
         if (UserService.User == null)
         {
             NavManager.NavigateTo("Login");
             return;
         }
-      Products = ProductService.SearchByGenre(GenreString);
-      base.OnInitialized();
+       
+       // Uses the SearchByGenre Function to get products
+       Products = ProductService.SearchByGenre(GenreString);
+
+       // Runs default OnInitialized Function
+       base.OnInitialized();
    }
 }

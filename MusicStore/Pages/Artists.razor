@@ -56,51 +56,68 @@
     </div>
 
 @code {
+    // String Input For New Artist Name - Binded
     private string Artist { get; set; } = string.Empty;
+    // Holds the message output, starts as empty - Binded
     private string Message { get; set; } = string.Empty;
 
+    // Initialise Function Runs On Page Load To Load Data
     protected override void OnInitialized()
     {
+        // If user is null means user is not autheticated so returns to login page using Navigation Manager
         if (UserService.User == null)
         {
             NavManager.NavigateTo("Login");
             return;
         }
+        // Runs the default OnInitialize Function
         base.OnInitialized();
     }
 
+    // The Function that is ran when Add Artist Button is preed
     private void OnArtistAdd()
     {
+        // Makes sure there is an artist name if not sets Message and return
         if (string.IsNullOrWhiteSpace(Artist))
         {
             Message = "No value entered";
             return;
         }
-
+        
+        // Runs the add artist function
         var response = ArtistService.AddArtist(Artist);
 
+        // Checks response if conflict sets Message and returns
         if (response == HttpStatusCode.Conflict)
         {
             Message = "Artist already exists ";
             return;
         }
+        // Sets success Message
         Message = "Artist added ";
     }
 
+    // Function Ran When Artist Remove Button Is Pressed
     private void OnArtistRemove()
     {
+        // Makes sure there is an artist name if not sets Message and returns
         if (string.IsNullOrWhiteSpace(Artist))
         {
             Message = "No value entered";
             return;
         }
 
+        // Runs the RemoveArtist Function
         var response = ArtistService.RemoveArtist(Artist);
+        
+        // Checks the Response if it is NotFound sets Message and returns
         if (response == HttpStatusCode.NotFound)
         {
             Message = "Artist not found";
             return;
         }
+        
+        // Sets success Message
         Message = "Artist Removed";
     }
 }

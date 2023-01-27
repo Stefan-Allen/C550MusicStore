@@ -40,25 +40,30 @@
 	</div>
 
 @code {
+    // Holds the inputted Query - Binded
+    private string Query { get; set; } = string.Empty;
+    // Holds the Results of the Query
+    private List<ProductSchema> Results { get; set; } = new();
 
-  private string Query { get; set; } = string.Empty;
-
-  private List<ProductSchema> Results { get; set; } = new();
-
-  protected override void OnInitialized()
+    protected override void OnInitialized()
   {
+       // If user is null means user is not authenticated so returns to login page using Navigation Manager
         if (UserService.User == null)
         {
             NavManager.NavigateTo("Login");
             return;
         }
-    base.OnInitialized();
+        // Runs Default OnINitialized Function
+        base.OnInitialized();
   }
-
+    
+    // Runs on the Search Button Press
   private void OnSearch()
   {
+      // If the query is empty do nothing
     if (string.IsNullOrEmpty(Query)) return;
 
+      // sets the results of the search
     Results = ProductService.SearchProducts(Query.Trim()).ToList();
   }
 }

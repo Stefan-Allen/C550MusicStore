@@ -199,27 +199,59 @@
     </div>
 <!-- Login Form -->
 @code {
+    // Holds Inputted Full Name - Binded
     private string FullName { get; set; } = string.Empty;
+    // Holds Inputted Username - Binded
     private string Username { get; set; } = string.Empty;
+    // Holds Inputted Password - Binded
     private string Password { get; set; } = string.Empty;
+    // Holds Inputted Day of DOB - Binded
     private string DOBDay { get; set; } = string.Empty;
+    // Holds Inputted Month of DOB - Binded
     private string DOBMonth { get; set; } = string.Empty;
+    // Holds Inputted Year of DOB - Binded
     private string DOBYear { get; set; } = string.Empty;
+    // Holds Inputted Gender - Binded
     private string Gender { get; set; } = string.Empty;
+    // Holds Inputted Title - Binded
     private string Title { get; set; } = string.Empty;
+    // Holds Response Message
     private string Message { get; set; } = string.Empty;
 
     private void RegisterFn()
     {
-        var parsedDob = DateTime.Parse($"{DOBMonth}-{DOBDay}-{DOBYear}", new CultureInfo("en-US"), DateTimeStyles.None);
-        var result = _UserService.RegisterAsync(Username, Password, FullName, dob: parsedDob, Gender, Title).GetAwaiter().GetResult();
+        // Checks if values are inputted if not sets message and returns
+        if (string.IsNullOrWhiteSpace(FullName) || string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password) || string.IsNullOrWhiteSpace(Gender) || string.IsNullOrWhiteSpace(Title))
+        {
+            Message = "Missing inputs";
+            return;
+        }
+        
+        // Checks for valid date input
+        if (string.IsNullOrWhiteSpace(DOBDay) || string.IsNullOrWhiteSpace(DOBMonth) || string.IsNullOrWhiteSpace(DOBYear))
+        {
+            Message = "Invalid date input";
+            return;
+        }
 
-        // Account Already Exists
+        // Checks password Length for security reasons
+        if (string.IsNullOrWhiteSpace(Password) || Password.Length < 6)
+        {
+            Message = "Minimum password length is 6";
+            return;
+        }
+        
+        // Parses DOB
+        var parsedDob = DateTime.Parse($"{DOBMonth}-{DOBDay}-{DOBYear}", new CultureInfo("en-US"), DateTimeStyles.None);
+        // Runs the register function
+        var result = _UserService.RegisterAsync(Username, Password, FullName, dob: parsedDob, Gender, Title).GetAwaiter().GetResult();
+        
+        // Checks Response to see if Account Already Exists
         if (result == HttpStatusCode.Conflict)
         {
             Message = "Username already exits";
         }
-    // Else Account Created Response
+        // Else Account Created Response
         else
         {
             NavManager.NavigateTo("Login", true);

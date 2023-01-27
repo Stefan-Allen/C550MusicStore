@@ -12,7 +12,7 @@
     <a href="/Products">Products</a>
     <a href="/Profile">Profile</a>
     <a href="/Search">Search</a>
-    <a href="/Checkout">Checkout</a
+    <a href="/Checkout">Checkout</a>
         <a href="/Orders">Orders</a>
 </div>
 
@@ -52,17 +52,23 @@
                
 @code {
 
+    // Holds the Order for that user
     private List<OrderSchema> _Orders { get; set; } = new();
 
+    // Runs on page load
     protected override void OnInitialized()
     {
+        // If user is null means user is not autheticated so returns to login page using Navigation Manager
         if (UserService.User == null)
         {
             NavManager.NavigateTo("Login");
             return;
         }
 
+        // Gets the order from the UserService for the logged in user
         _Orders = UserService.GetOrders();
+        
+        // Runs the default OnInitialized Function
         base.OnInitialized();
     }
 }

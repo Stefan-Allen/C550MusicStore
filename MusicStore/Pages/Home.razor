@@ -32,7 +32,7 @@
 	<h2 class="section-title" style="margin-left: 10px";>Genre </h2>
 	<ul class="albums-list">
 		<li class="album-card -small">
-			<img class="image" src="/th.jpg" alt="Minutes to Midnight" />
+			<img class="image" src="/th.jpg" alt="Genre" />
 			<div class="album-info">
 				<h3 class="name">Blues Music</h3>
 				<p class="meta"></p>
@@ -99,7 +99,7 @@
 		</li>
 		<!-- card -->
 		<li class="album-card -small">
-			<img class="image" src="/th.jpg" alt="Collisiona Course"/>
+			<img class="image" src="/th.jpg" alt="Genre"/>
 			<div class="album-info">
 				<h3 class="name">Pop Music</h3>
 				<p class="meta"></p>
@@ -113,7 +113,7 @@
 	</ul>
 <ul class="albums-list">
 	<li class="album-card -small">
-			<img class="image" src="/th.jpg" alt="Minutes to Midnight"/>
+			<img class="image" src="/th.jpg" alt="Genre"/>
 		<div class="album-info">
 				<h3 class="name">Classical Music</h3>
 			<p class="meta"></p>
@@ -126,7 +126,7 @@
 	</li>
 	<!-- card -->
 	<li class="album-card -small">
-			<img class="image" src="/th.jpg" alt="Collisiona Course" />
+			<img class="image" src="/th.jpg" alt="Genre" />
 		<div class="album-info">
 				<h3 class="name">Rap Music</h3>
 			<p class="meta"></p>
@@ -145,21 +145,24 @@
 
 
 @code {
-
+	// Holds the products for this page
 	private List<ProductSchema> Products { get; set; }
 
+	// Runs on page load
 	protected override void OnInitialized()
 	{
-		base.OnInitialized();
+	// If user is null means user is not autheticated so returns to login page using Navigation Manager
 		if(UserService.User == null)
 		{
 			NavManager.NavigateTo("Login", true);
 			return;
 		}
-
-		Products = ProductServiceInstance.GetProducts();
-		Console.WriteLine(Products.Any(p => p.Name.ToLower().Trim().Contains("TEST".ToLower().Trim())));
 		
+		// Gets all products
+		Products = ProductServiceInstance.GetProducts();
+		
+		// Runs Default OnInitialized
+		base.OnInitialized();
 	}
 
 }

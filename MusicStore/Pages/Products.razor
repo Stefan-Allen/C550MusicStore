@@ -74,26 +74,38 @@
 </body>
 
 @code {
+    // Holds the Name of the new Product - Binded
     private string Name { get; set; } = string.Empty;
+    // Holds the Genre of the new Product - Binded
     private string Genre { get; set; } = string.Empty;
+    // Holds the Price of the new Product - Binded
     private string Price { get; set; } = string.Empty;
+    // Holds the Artist Name of the New Product - Binded
     private string Artist { get; set; } = string.Empty;
+    // Holds the Response Message
     private string Message { get; set; } = string.Empty;
 
+    // Holds the Name of the Removal Product - Binded
     private string RemovalName { get; set; } = string.Empty;
 
+    // Runs on page load
     protected override void OnInitialized()
     {
+        // If user is null means user is not autheticated so returns to login page using Navigation Manager
         if (UserService.User == null)
         {
             NavManager.NavigateTo("Login");
             return;
         }
+        
+        // Runs the Default OnInitialized Function
         base.OnInitialized();
     }
 
+    // Runs on Add Product Button
     private void OnAddProduct()
     {
+        // Checks the Input Values and if any are null sets Message and returns
         if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Genre) || string.IsNullOrEmpty(Price) || string.IsNullOrEmpty(Artist))
         {
 
@@ -101,29 +113,47 @@
             return;
         }
 
+        // Attempts to Parse the Price to a Double if fails sets Message and returns
         if (!double.TryParse(Price, out var parsed))
         {
             Message = "Invalid price";
             return;
         }
 
+        // Runs the Add Product CRUD Function
         var response = ProductService.AddProduct(Artist, Name, Genre, string.Empty, parsed);
 
+        // Checks the Response if conflict sets Message and returns
         if (response == HttpStatusCode.Conflict)
         {
             Message = "Product already exist";
             return;
         }
+        
+        // Sets success Message
         Message = "Product created successfully";
     }
 
     private void OnRemoveProduct()
     {
+        // if removalname is not inputted set Message and return
+        if (string.IsNullOrWhiteSpace(RemovalName))
+        {
+            Message = "Missing required input";
+            return;
+        }
+        
+        // Runs RemoveProduct CRUD Function
         var response = ProductService.RemoveProduct(RemovalName);
 
+        // Checks response if NotFound sets message and returns
         if (response == HttpStatusCode.NotFound)
         {
-            
+            Message = "Product not found";
+            return;
         }
+
+        // Sets success message
+        Message = "Removed Product Successfully";
     }
 }

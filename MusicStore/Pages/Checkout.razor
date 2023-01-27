@@ -70,39 +70,55 @@
     </div>
 </div>
 @code {
+    // Holds The Full Name That is Inputted - Binded
     private string FullName { get; set; } = string.Empty;
+    // Holds the Email That is Inputted - Binded
     private string Email { get; set; } = string.Empty;
+    // Holds the StreetName That is Inputted - Binded
     private string StreetName { get; set; } = string.Empty;
+    // Holds the PostCode That is Inputted - Binded
     private string PostCode { get; set; } = string.Empty;
+    // Holds the Message That Display Outcomes - Binded
     private string Message { get; set; } = string.Empty;
     
+    // Runs on page load
     protected override void OnInitialized()
     {
+        // If user is null means user is not autheticated so returns to login page using Navigation Manager
         if (UserService.User == null)
         {
             NavManager.NavigateTo("Login");
             return;
         }
+        // Runs Default OnInitialized Function
         base.OnInitialized();
     }
 
+    // Runs when the Checkout Button Is Pressed
     private void OnCheckout()
     {
+        // Checks if any inputted values are blank if so sets Message and retuns
         if (string.IsNullOrWhiteSpace(FullName) || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(StreetName) || string.IsNullOrWhiteSpace(PostCode))
         {
             Message = "Missing value";
             return;
         }
 
+        // Formats the Address
         var address = $"{FullName}\n{StreetName}\n{PostCode}";
 
+        // Runs the Check Function
         var response = BasketService.Checkout(Email, address, UserService.User!);
-
+        
+        
+        // Checks the Response if NotFound Sets Message and Returns
         if (response == HttpStatusCode.NotFound)
         {
             Message = "No items in basket";
             return;
         }
+        
+        // Sets the success message
         Message = "Order created";
     }
 }

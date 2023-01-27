@@ -81,22 +81,34 @@ public class BasketService
         return total;
     }
 
+    // CRUD Action Create Orders, and Puts the in the Orders Table
     public HttpStatusCode Checkout(string email, string address, UserSchema user)
     {
+        // Check Basket is not empty
         if (Products.Count == 0) return HttpStatusCode.NotFound;
         
+        // New Database Instance
         var db = new Database();
+
+        // Ensures the database is created
+        db.Database.EnsureCreated();
         
+        // Check the Order Count
         var count = !db.Orders.Any() ? 0 : db.Orders.Max(x => x.Id);
 
+        // Initialise Contents String
         var contents = "";
         
+        // Add Each Product to The Contents String
         foreach (var (key, value) in Products)
         {
             contents += $"------------\nID:{key.Id}\nName:{key.Name}\nArtist: {key.Artist.Name}\nPrice: {key.Price}\nQuantity: {value}\n";
         }
 
+        // Add Ending String
         contents += "------------";
+        
+        // Add Order To Database
         db.Orders.Add(new OrderSchema
         {
             Id = count + 1,
@@ -106,10 +118,13 @@ public class BasketService
             Email = email
         });
 
+        // Save Changes To Database
         db.SaveChanges();
         
+        // Clear Basket
         Products.Clear();
-
+        
+        // Respond With Success Http Status Code
         return HttpStatusCode.Created;
     }
 }
