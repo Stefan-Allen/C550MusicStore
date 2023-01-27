@@ -1,0 +1,21 @@
+﻿@page "/Genre/{genrestring}"
+@using MusicStore.Data
+@using MusicStore.Schemas
+
+@inject ProductService ProductService
+
+
+
+@code {
+   [Parameter]
+   private string GenreString { get; set; }
+   
+   private ProductSchema[] Products { get; set; }
+   
+
+   protected override void OnInitialized()
+   {
+      Products = ProductService.SearchByGenre(GenreString);
+      base.OnInitialized();
+   }
+}

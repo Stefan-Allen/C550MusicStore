@@ -8,7 +8,7 @@ public class BasketService
 
     public void AddProduct(ProductSchema item)
     {
-        if (Products.ContainsKey(item))
+        if (!Products.ContainsKey(item))
         {
             Products.Add(item, 1);
             return;

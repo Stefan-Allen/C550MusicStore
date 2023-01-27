@@ -22,8 +22,6 @@ public class UserService
         {
             return HttpStatusCode.NotFound;
         }
-        Console.WriteLine(user.Password);
-        Console.WriteLine(password);
         if (user.Password.Trim() != password.Trim())
         {
             return HttpStatusCode.Forbidden;

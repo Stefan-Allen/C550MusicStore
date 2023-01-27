@@ -1,4 +1,6 @@
-﻿namespace MusicStore.Schemas;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MusicStore.Schemas;
 
 public class ArtistSchema
 {

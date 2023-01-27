@@ -146,22 +146,9 @@
 
 	protected override void OnInitialized()
 	{
+		Products = ProductServiceInstance.GetProducts();
+		Console.WriteLine(Products.Any(p => p.Name.ToLower().Trim().Contains("TEST".ToLower().Trim())));
 		base.OnInitialized();
-		Products = ProductServiceInstance.GetProducts().ToList();
-		Products.Add(new ProductSchema
-			{
-				Id = 2,
-				Artist = new ArtistSchema
-				{
-					Id = 5,
-					ImageName = "kodkodkdok.jpg",
-					Name = "Obi Wan"
-				},
-				Genre = "Rock",
-				ImageName = "Dusty.jpg",
-				Name = "Song Test",
-				Price = 2.99
-			});
 	}
 
 }

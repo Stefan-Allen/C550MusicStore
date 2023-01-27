@@ -1,17 +1,18 @@
 ﻿using System.Net;
+using Microsoft.EntityFrameworkCore;
 using MusicStore.Schemas;
 
 namespace MusicStore.Data;
 
 public class ProductService
 {
-    public ProductSchema[] GetProducts()
+    public List<ProductSchema> GetProducts()
     {
         var db = new Database();
 
         db.Database.EnsureCreated();
 
-        return db.Products.ToArray();
+        return db.Products.Include(e => e.Artist).ToList();
     }
 
     public ProductSchema? FindProduct(string query)
@@ -30,9 +31,14 @@ public class ProductService
 
         db.Database.EnsureCreated();
 
-        var results = db.Products.Where(p => p.Name.ToLower().Trim().Contains(query.ToLower().Trim())).ToArray();
+        if (db.Products.Include(p => p.Artist).Any(p => p.Name.ToLower().Trim() == query.ToLower().Trim()))
+        {
+            return db.Products.Include(p => p.Artist).ToArray();
+        }
 
-        return results != Array.Empty<ProductSchema>() ? results : db.Products.Where(p => p.Artist.Name.ToLower().Trim() == query.ToLower().Trim()).ToArray();
+        var results = db.Products.Include(p => p.Artist).Where(p => p.Name.ToLower().Trim().Contains(query.ToLower().Trim())).ToArray();
+
+        return results != Array.Empty<ProductSchema>() ? results : db.Products.Include(p => p.Artist).Where(p => p.Artist.Name.ToLower().Trim() == query.ToLower().Trim()).ToArray();
     }
 
     public HttpStatusCode AddProduct(string artistName, string name, string genre, string imageName, double price)
@@ -52,9 +58,9 @@ public class ProductService
         {
             Id = count,
             Artist = artist,
-            Name = name,
-            Genre = genre,
-            ImageName = imageName,
+            Name = name.Trim(),
+            Genre = genre.Trim(),
+            ImageName = imageName.Trim(),
             Price = price
         });
 
@@ -79,5 +85,20 @@ public class ProductService
         db.SaveChanges();
 
         return HttpStatusCode.Gone;
+    }
+
+    public ProductSchema[] SearchByGenre(string genre)
+    {
+        var db = new Database();
+
+        db.Database.EnsureCreated();
+
+        if (!db.Products.Any(p => p.Genre.ToLower().Trim() == genre.Trim().ToLower()))
+        {
+            return Array.Empty<ProductSchema>();
+        }
+
+        return db.Products.Include(p => p.Artist).Where(p => p.Genre.ToLower().Trim() == genre.ToLower().Trim())
+            .ToArray();
     }
 }

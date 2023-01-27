@@ -62,21 +62,17 @@
         {
             // User Account Does Not Exist
             case HttpStatusCode.NotFound:
-                Console.WriteLine("1");
                 Message = "No username found";
                 break;
             // Invalid Password
             case HttpStatusCode.Forbidden:
-                Console.WriteLine("2");
                 Message = "Incorrect password";
                 break;
             // Correct Password
             case HttpStatusCode.Accepted:
-                Console.WriteLine("3");
                 NavManager.NavigateTo("/Home");
                 break;
             default:
-                Console.WriteLine("4");
                 break;
         }
     }
