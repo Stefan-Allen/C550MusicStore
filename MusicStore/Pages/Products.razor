@@ -80,6 +80,12 @@
 
     private string RemovalName { get; set; } = string.Empty;
 
+    protected override void OnInitialized()
+    {
+        if(UserService.User == null) NavManager.NavigateTo("Login");
+        base.OnInitialized();
+    }
+
     private void OnAddProduct()
     {
         if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Genre) || string.IsNullOrEmpty(Price) || string.IsNullOrEmpty(Artist))

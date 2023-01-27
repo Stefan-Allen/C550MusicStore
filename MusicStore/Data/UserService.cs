@@ -9,8 +9,7 @@ namespace MusicStore.Data;
 public class UserService
 {
     public UserSchema? User;
-    private static string salt = "ododokdodkodkdokdokdokdodkodkodkdokdokd"; 
-    
+
     public async Task<HttpStatusCode> LoginAsync(string username, string password)
     {
         var db = new Database();
@@ -22,7 +21,7 @@ public class UserService
         {
             return HttpStatusCode.NotFound;
         }
-        if (user.Password.Trim() != password.Trim())
+        if (!VerifyPassword(password, user.Password, user.Salt))
         {
             return HttpStatusCode.Forbidden;
         }
@@ -34,7 +33,6 @@ public class UserService
 
     public async Task<HttpStatusCode> RegisterAsync(string username, string password, string fullName, DateTime dob, string gender, string title)
     {
-        Console.WriteLine(dob);
         var db = new Database();
         await db.Database.EnsureCreatedAsync();
         
@@ -43,7 +41,7 @@ public class UserService
             return HttpStatusCode.Conflict;
         }
 
-        var hashed = HashPasword(password);
+        var hashed = HashPasword(password, out var salt);
 
         var user = new UserSchema
         {
@@ -52,7 +50,7 @@ public class UserService
             Dob = dob,
             Username = username.Trim(),
             FullName = fullName,
-            Password = password,
+            Password = hashed,
             Salt = salt,
             Gender = gender
         };
@@ -64,8 +62,9 @@ public class UserService
         return HttpStatusCode.Created;
     }
     
-    private string HashPasword(string password)
+    private string HashPasword(string password, out string salt)
     {
+        salt = GetSalt();
         var hash = Rfc2898DeriveBytes.Pbkdf2(
             Encoding.UTF8.GetBytes(password),
             Encoding.UTF8.GetBytes(salt),
@@ -75,9 +74,19 @@ public class UserService
         return Convert.ToHexString(hash);
     }
     
-    private bool VerifyPassword(string password, string hash)
+    private bool VerifyPassword(string password, string hash, string salt)
     {
-        var hashToCompare = Rfc2898DeriveBytes.Pbkdf2(password, Encoding.UTF8.GetBytes(salt), 35000, HashAlgorithmName.SHA512, 64);
+        var hashToCompare = Rfc2898DeriveBytes.Pbkdf2(Encoding.UTF8.GetBytes(password), Encoding.UTF8.GetBytes(salt), 350000, HashAlgorithmName.SHA512, 64);
         return hashToCompare.SequenceEqual(Convert.FromHexString(hash));
     }
+    
+    
+    private static string GetSalt()  
+    {  
+        var bytes = new byte[128 / 8];
+        using var keyGenerator = RandomNumberGenerator.Create();
+        keyGenerator.GetBytes(bytes);  
+        return BitConverter.ToString(bytes).Replace("-", "").ToLower();
+    }  
+
 }

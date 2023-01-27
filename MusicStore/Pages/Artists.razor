@@ -56,6 +56,12 @@
     private string Artist { get; set; } = string.Empty;
     private string Message { get; set; } = string.Empty;
 
+    protected override void OnInitialized()
+    {
+        if(UserService.User == null) NavManager.NavigateTo("Login");
+        base.OnInitialized();
+    }
+
     private void OnArtistAdd()
     {
         if (string.IsNullOrWhiteSpace(Artist))

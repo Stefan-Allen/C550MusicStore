@@ -2,6 +2,8 @@
 @using MusicStore.Data;
 
 @inject BasketService BasketService;
+@inject UserService UserService;
+@inject NavigationManager NavManager;
 
 <div class="topnav">
         <a class="active" href="/Home">Home</a>
@@ -51,6 +53,7 @@
 
     protected override void OnInitialized()
     {
+        if(UserService.User == null) NavManager.NavigateTo("Login");
         base.OnInitialized();
         TotalCost = BasketService.GetTotal();
     }

@@ -2,6 +2,7 @@
 @using MusicStore.Data
 
 @inject UserService UserService
+@inject NavigationManager NavManager;
 
 <div class="topnav">
         <a class="active" href="/Home">Home</a>
@@ -66,6 +67,8 @@
 
     protected override void OnInitialized()
     {
+        
+        if(UserService.User == null) NavManager.NavigateTo("Login");
         base.OnInitialized();
         if (UserService.User?.FullName != null) FullName = UserService.User?.FullName;
         if (UserService.User?.Username != null) Username = UserService.User?.Username;

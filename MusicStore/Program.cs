@@ -7,12 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+// Add Our Custom Services For Handling Users, The Basket, All Products and Artists
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<BasketService>();
 builder.Services.AddSingleton<ProductService>();
 builder.Services.AddSingleton<ArtistService>();
 
 var app = builder.Build();
+
+// Static Function Attempting To Seed The Database
+Database.TrySeedDatabase();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
