@@ -20,6 +20,9 @@
     <div class="profile">
         <div class="content">
             <h1>Checkout</h1>
+            <p>
+                @Message
+            </p>
             <div action="">
                 <!-- Email -->
                 <fieldset>
@@ -92,7 +95,7 @@
 
         var address = $"{FullName}\n{StreetName}\n{PostCode}";
 
-        var response = BasketService.Checkout(address, UserService.User!);
+        var response = BasketService.Checkout(Email, address, UserService.User!);
 
         if (response == HttpStatusCode.NotFound)
         {

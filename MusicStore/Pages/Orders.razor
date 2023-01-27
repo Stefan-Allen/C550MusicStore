@@ -1,0 +1,25 @@
+﻿@page "/Orders"
+@using MusicStore.Data
+@using MusicStore.Schemas
+
+@inject UserService UserService;
+@inject NavigationManager NavManager;
+
+
+
+@code {
+
+    private List<OrderSchema> _Orders { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        if (UserService.User == null)
+        {
+            NavManager.NavigateTo("Login");
+            return;
+        }
+
+        _Orders = UserService.GetOrders();
+        base.OnInitialized();
+    }
+}

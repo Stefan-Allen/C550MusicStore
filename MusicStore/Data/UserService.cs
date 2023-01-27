@@ -87,6 +87,17 @@ public class UserService
         using var keyGenerator = RandomNumberGenerator.Create();
         keyGenerator.GetBytes(bytes);  
         return BitConverter.ToString(bytes).Replace("-", "").ToLower();
-    }  
+    }
+
+    public List<OrderSchema> GetOrders()
+    {
+        var db = new Database();
+
+        db.Database.EnsureCreated();
+
+        if (!db.Orders.Any() || !db.Orders.Any(p => p.UserId == this.User!.Id)) return new List<OrderSchema>();
+
+        return db.Orders.Where(o => o.UserId == this.User!.Id).ToList();
+    }
 
 }

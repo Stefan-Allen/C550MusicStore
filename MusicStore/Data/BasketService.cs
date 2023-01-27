@@ -81,7 +81,7 @@ public class BasketService
         return total;
     }
 
-    public HttpStatusCode Checkout(string address, UserSchema user)
+    public HttpStatusCode Checkout(string email, string address, UserSchema user)
     {
         if (Products.Count == 0) return HttpStatusCode.NotFound;
         
@@ -93,18 +93,18 @@ public class BasketService
         
         foreach (var (key, value) in Products)
         {
-            contents += $"------------\nID:{key.Id}\nName:{key.Name}\nArtist: {key.Artist}\nPrice{key.Price}\nQuantity: {value}\n";
+            contents += $"------------\nID:{key.Id}\nName:{key.Name}\nArtist: {key.Artist.Name}\nPrice: {key.Price}\nQuantity: {value}\n";
         }
 
         contents += "------------";
-        user.Orders.Add(new OrderSchema
+        db.Orders.Add(new OrderSchema
         {
             Id = count + 1,
+            UserId = user.Id,
             Address = address,
-            Contents = contents
+            Contents = contents,
+            Email = email
         });
-
-        db.Update(user);
 
         db.SaveChanges();
         
