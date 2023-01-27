@@ -34,7 +34,7 @@
                                 <input class="firstName" required="" type="text" placeholder="Full Name" @bind="FullName"/>
                             </p>
                             <p>
-                                <input class="password" required="" type="password" placeholder="Password" @bind="Password"/>
+                                <input class="password" minlenth="8" required="" type="password" placeholder="Password" @bind="Password"/>
                             </p>
                             <p class="DOB-Style">
                                 <select class="dob1" name="gender" required="" asp-for="1" @bind="DOBDay">

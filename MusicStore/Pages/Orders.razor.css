@@ -1,42 +1,35 @@
-.topnav[b-6mzorskmac] {
+﻿.topnav {
     overflow: hidden;
     background-color: #333;
-  }
-  
-  .topnav a[b-6mzorskmac] {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover[b-6mzorskmac] {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active[b-6mzorskmac] {
-    background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
-    color: white;
-  }
-
-.profile[b-6mzorskmac], .content[b-6mzorskmac] {
-    -webkit-transition: 0.5s ease;
-    -moz-transition: 0.5s ease;
-    transition: 0.5s ease;
 }
 
-.profile[b-6mzorskmac] {
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
+            color: white;
+        }
+
+.profile {
     position: absolute;
     top: 100px;
     bottom: auto;
     left: 0;
     right: 0;
-    min-height: 100%;
     height: auto;
-    width: 75%;
+    width: 80%;
     margin: 20px auto;
     margin-bottom: 100px;
     background-color: #fff;
@@ -45,25 +38,11 @@
     box-shadow: 0 2.5px 5px #ccc;
 }
 
-.btnbtnprimary[b-6mzorskmac] {
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    outline: 0;
-    margin-left: 0px;
-    background: #941a1a;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    cursor: pointer;
-}
 
-.content[b-6mzorskmac] {
+.content {
     /* position: absolute; */
     min-height: 100%;
     height: 100%;
-    width: 95%;
     margin: 2.5% auto;
     left: 0;
     right: 0;
@@ -74,7 +53,7 @@
     overflow: hidden;
 }
 
-.short-info[b-6mzorskmac] {
+.short-info {
     position: relative;
     min-height: 100px;
     height: auto;
@@ -88,18 +67,18 @@
     /*box-shadow: inset 0 -1.5px #ddd;*/
 }
 
-.details[b-6mzorskmac] {
+.details {
     width: 97.5%;
     /*background-color: red;*/
     margin: 2.5px auto;
 }
 
-.tab-heads[b-6mzorskmac] {
+.tab-heads {
     color: #777;
     margin: 0 2.5px;
 }
 
-.tabs[b-6mzorskmac] {
+.tabs {
     height: 200px;
     width: 97.5%;
     margin: 0 auto;
@@ -109,14 +88,14 @@
     /* background-color: #f3f3f3; */
 }
 
-span.fa-envelope[b-6mzorskmac] {
+span.fa-envelope {
     position: absolute;
     top: 22%;
     left: 56%;
     color: #39cb58;
 }
 
-span.photo[b-6mzorskmac] {
+span.photo {
     position: relative;
     height: 80px;
     width: 80px;
@@ -132,7 +111,7 @@ span.photo[b-6mzorskmac] {
     border: 2px solid #ddd;
 }
 
-    span.photo[b-6mzorskmac]:after {
+    span.photo:after {
         content: " Add Profile Pic ";
         text-align: center;
         position: absolute;
@@ -150,13 +129,13 @@ span.photo[b-6mzorskmac] {
         border-radius: 100%;
     }
 
-    span.photo:hover[b-6mzorskmac]:after {
+    span.photo:hover:after {
         bottom: 0;
         opacity: 1;
         color: #fff;
     }
 
-.input[type="file"][b-6mzorskmac] {
+.input[type="file"] {
     /* position: absolute; */
     color: #555;
     font-size: 15px;
@@ -167,12 +146,12 @@ span.photo[b-6mzorskmac] {
     border: 0;
 }
 
-span.name[b-6mzorskmac], span.links > h3[b-6mzorskmac], h4[b-6mzorskmac] {
+span.name, span.links > h3, h4 {
     font-family: Lato;
     /*font-weight: 200;*/
 }
 
-span.name[b-6mzorskmac] {
+span.name {
     position: absolute;
     top: 20%;
     left: 25%;
@@ -180,17 +159,17 @@ span.name[b-6mzorskmac] {
     font-size: 18px;
 }
 
-label[b-6mzorskmac] {
+label {
     color: #555;
     line-height: 2.1em;
     margin-left: 10px;
 }
 
-    label[for="avatar"][b-6mzorskmac] {
+    label[for="avatar"] {
         line-height: 120px;
     }
 
-.btn[b-6mzorskmac] {
+.btn {
     /* position: absolute; */
     top: 45%;
     left: 25%;
@@ -204,41 +183,41 @@ label[b-6mzorskmac] {
     transition: 0.5s ease;
 }
 
-span.btn:hover[b-6mzorskmac] {
+span.btn:hover {
     opacity: 1;
     color: #fff;
     background-color: #941a1a;
     /* background-color: #39cb58; */
 }
 
-.profile:hover .btn[b-6mzorskmac] {
+.profile:hover .btn {
     opacity: 1;
 }
 
-.short-info span h3[b-6mzorskmac], h4[b-6mzorskmac] {
+.short-info span h3, h4 {
     display: inline-block;
     margin: 0;
 }
 
-div.circles[b-6mzorskmac] {
+div.circles {
     width: 100%;
     margin: 0 auto;
 }
 
-span.fa-users[b-6mzorskmac] {
+span.fa-users {
     color: #777;
     margin-left: 1px;
     margin: 7px 7px 2.5px;
 }
 
-    span.fa-users[b-6mzorskmac]:after {
+    span.fa-users:after {
         content: "Circles";
         font-family: Lato;
         margin-left: 3px;
         color: #777;
     }
 
-.myCircle[b-6mzorskmac] {
+.myCircle {
     height: 200px;
     width: 97.5%;
     margin: 0 auto;
@@ -248,7 +227,7 @@ span.fa-users[b-6mzorskmac] {
 
     /*Circles Styles
 =========================*/
-    .myCircle #tabs ul li:nth-child(1)[b-6mzorskmac] {
+    .myCircle #tabs ul li:nth-child(1) {
         margin: 0;
         padding: 0px 5px 10px;
         /*margin-top: 5px;*/
@@ -256,24 +235,24 @@ span.fa-users[b-6mzorskmac] {
         border-radius: 0 0 0 30px;
     }
 
-    .myCircle #tabs ul li:nth-child(2)[b-6mzorskmac] {
+    .myCircle #tabs ul li:nth-child(2) {
         margin-left: -3px;
         padding: 0 5px 10px;
         border-radius: 0 0 30px 0;
         background-color: white;
     }
 
-    .myCircle #tabs .active[b-6mzorskmac] {
+    .myCircle #tabs .active {
         border-bottom: none;
         padding-left: 10px;
     }
 
-    .myCircle #tabs[b-6mzorskmac] {
+    .myCircle #tabs {
         padding: 0;
         margin: 0;
     }
 
-.fa-twitter[b-6mzorskmac], .fa-facebook[b-6mzorskmac], .fa-github[b-6mzorskmac] {
+.fa-twitter, .fa-facebook, .fa-github {
     height: 20px;
     width: 20px;
     text-align: center;
@@ -284,7 +263,7 @@ span.fa-users[b-6mzorskmac] {
 
 /*Input Fields Styles
 =========================*/
-fieldset textarea[b-6mzorskmac], input[b-6mzorskmac] {
+fieldset textarea, input {
     font-family: Open Sans;
     font-size: 15px;
     color: #333;
@@ -299,44 +278,66 @@ fieldset textarea[b-6mzorskmac], input[b-6mzorskmac] {
     transition: 0.3s ease;
 }
 
-fieldset textarea[b-6mzorskmac] {
+fieldset textarea {
     min-height: 40px;
     max-height: 60px;
 }
 
-    fieldset textarea:hover[b-6mzorskmac], input:hover[b-6mzorskmac] {
+    fieldset textarea:hover, input:hover {
         box-shadow: 0 0 0 1px #941a1a;
         background-color: #fff;
     }
 
-    fieldset textarea:focus[b-6mzorskmac], input:focus[b-6mzorskmac] {
+    fieldset textarea:focus, input:focus {
         box-shadow: 0 0 0 1px #941a1a;
     }
 
-.grid-35[b-6mzorskmac] {
-    width: 35%;
-    float: left;
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.grid-35 {
+
+    font-weight: 500;
+    color: #333;
+    margin-left: 10px;
+
+    /* text-align: left; */
+}
+
+.grid-34{
     font-weight: 500;
     color: #333;
     /* text-align: left; */
 }
 
-.grid-65[b-6mzorskmac] {
+.grid-65 {
     position: relative;
-    width: 65%;
-    float: right;
     font-family: Source Sans Pro;
     font-weight: 300;
     font-size: 17px;
+    margin-left: 10px;
 }
 
-#tabs-1 div[b-6mzorskmac], #tabs-2 div[b-6mzorskmac], #tabs-3 div[b-6mzorskmac] {
+#tabs-1 div, #tabs-2 div, #tabs-3 div {
     border-bottom: 1px solid #ddd;
 }
 
 /*Tabs Styles
 =========================*/
-#tabs[b-6mzorskmac] {
+#tabs {
     width: 97.5%;
     margin: 0 auto;
     position: relative;
@@ -345,7 +346,7 @@ fieldset textarea[b-6mzorskmac] {
     transition: all 0.5s ease;
 }
 
-#tabs-1[b-6mzorskmac], #tabs-2[b-6mzorskmac], #tabs-3[b-6mzorskmac] {
+#tabs-1, #tabs-2, #tabs-3 {
     width: 95%;
     margin: 0 auto;
     /*margin-top: 5px;*/
@@ -360,12 +361,12 @@ fieldset textarea[b-6mzorskmac] {
     transition: all 0.5s ease;
 }
 
-#tabs ul[b-6mzorskmac] {
+#tabs ul {
     margin: 0 auto;
     padding: 0;
 }
 
-    #tabs ul li[b-6mzorskmac] {
+    #tabs ul li {
         display: inline-block;
         margin: 0;
         padding: 0 7px;
@@ -377,7 +378,7 @@ fieldset textarea[b-6mzorskmac] {
         transition: all 0.5s ease;
     }
 
-        #tabs ul li a[b-6mzorskmac] {
+        #tabs ul li a {
             outline: 0;
             text-decoration: none;
             padding: 0 3px 0 0;
@@ -389,18 +390,18 @@ fieldset textarea[b-6mzorskmac] {
             transition: all 0.5s ease;
         }
 
-.ui-state-hover[b-6mzorskmac] {
+.ui-state-hover {
     border-bottom: 2.5px solid #aaa;
 }
 
-.ui-state-active[b-6mzorskmac] {
+.ui-state-active {
     color: #38cc85;
     border-bottom: 2.5px solid #941a1a;
 }
 
 /* #CLEARFIX HACK
 =========================*/
-.clear[b-6mzorskmac]:after {
+.clear:after {
     content: " ";
     display: table;
     clear: both;
@@ -408,7 +409,7 @@ fieldset textarea[b-6mzorskmac] {
 
 /* Edit View
 ======================*/
-.content h1[b-6mzorskmac] {
+.content h1 {
     text-align: center;
     color: #555;
     font-family: Lato;
@@ -417,7 +418,7 @@ fieldset textarea[b-6mzorskmac] {
     margin: 5px auto 15px auto;
 }
 
-select[b-6mzorskmac] {
+select {
     width: 80%;
     padding: 7px 10px;
     background-color: #f5f5f5;
@@ -426,11 +427,11 @@ select[b-6mzorskmac] {
     outline: 0;
 }
 
-    select option[b-6mzorskmac] {
+    select option {
         padding: 5px;
     }
 
-fieldset[b-6mzorskmac] {
+fieldset {
     text-align: center;
     /* background-color: rgba(0,0,0,0.01); */
     margin-bottom: 5px;
@@ -439,11 +440,11 @@ fieldset[b-6mzorskmac] {
     border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
-    fieldset:last-child[b-6mzorskmac] {
+    fieldset:last-child {
         border-bottom: none;
     }
 
-input.Btn[b-6mzorskmac] {
+input.Btn {
     width: 48%;
     float: left;
     display: block;
@@ -458,18 +459,18 @@ input.Btn[b-6mzorskmac] {
     transition: 0.5s ease;
 }
 
-    input.Btn:hover[b-6mzorskmac] {
+    input.Btn:hover {
         background-color: #941a1a;
     }
 
 /* Header Bar 
 ===========================*/
-.navbar[b-6mzorskmac] {
+.navbar {
     padding: 10px;
     box-shadow: 0 2.5px 10px rgba(0,0,0,0.5);
 }
 
-div.logo[b-6mzorskmac] {
+div.logo {
     /*    margin: 0 auto;*/
     /*    text-align: center;*/
     font-size: 30px;
@@ -484,16 +485,16 @@ div.logo[b-6mzorskmac] {
     z-index: 2;
 }
 
-span.logo-part[b-6mzorskmac] {
+span.logo-part {
     color: #fff;
-    background-color: #941a1a;  
+    background-color: #941a1a;
     padding: 2px 5.5px 0px 10px;
     border-radius: 100%;
     margin-bottom: 15px;
     font-family: "Montez";
 }
 
-.search[b-6mzorskmac] {
+.search {
     /*    margin-top:5px;
 /*    border:0;*/
     float: left;
@@ -503,7 +504,7 @@ span.logo-part[b-6mzorskmac] {
     padding-bottom: 0;
 }
 
-.search-bar[b-6mzorskmac] {
+.search-bar {
     /*    border:0;*/
     width: 220px;
     color: white;
@@ -518,24 +519,24 @@ span.logo-part[b-6mzorskmac] {
     transition: 0.4s ease;
 }
 
-.search-icon[b-6mzorskmac] {
+.search-icon {
     color: gray;
     margin-left: -27.5px;
 }
 
-.search-bar:focus[b-6mzorskmac] {
+.search-bar:focus {
     width: 255px;
     outline: none;
 }
 
-.navbar-nav li a[b-6mzorskmac] {
+.navbar-nav li a {
     padding-left: 8.5px;
     padding-right: 8.5px;
     font-size: 12px;
     transition: 0.5s ease;
 }
 
-    .navbar-nav li a > span.fa[b-6mzorskmac]:before {
+    .navbar-nav li a > span.fa:before {
         margin-right: 5px;
         /* background-color: #ddd; */
     }
@@ -545,11 +546,8 @@ span.logo-part[b-6mzorskmac] {
 /*Media Queries
 =========================*/
 @media only screen and (min-width: 768px) { /*Desktop*/
-    .profile[b-6mzorskmac] {
-        width: 450px;
-    }
-
-    .search[b-6mzorskmac] {
+    
+    .search {
         float: none;
         /* top: 0; */
         left: 0;
@@ -559,11 +557,11 @@ span.logo-part[b-6mzorskmac] {
 }
 
 @media only screen and (max-width: 768px) { /*Tablet*/
-    .profile[b-6mzorskmac] {
+    .profile {
         width: 70%;
     }
 
-    .search[b-6mzorskmac] {
+    .search {
         top: 0;
         left: 0;
         right: 0;
@@ -573,7 +571,7 @@ span.logo-part[b-6mzorskmac] {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 520px) { /*Phone*/
-    .profile[b-6mzorskmac] {
+    .profile {
         width: 90%;
     }
 }

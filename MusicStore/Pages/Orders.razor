@@ -5,8 +5,51 @@
 @inject UserService UserService;
 @inject NavigationManager NavManager;
 
+<div class="topnav">
+    <a class="active" href="/Home">Home</a>
+    <a href="/Artists">Artists</a>
+    <a href="/Basket">Basket</a>
+    <a href="/Products">Products</a>
+    <a href="/Profile">Profile</a>
+    <a href="/Search">Search</a>
+    <a href="/Checkout">Checkout</a
+        <a href="/Orders">Orders</a>
+</div>
 
 
+                <!-- Email -->
+                <div class="wrapper">
+    <div class="profile">
+        <div class="content">
+            <h1>Purchases</h1>
+            <table>
+  <tr>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Contents</th>
+  </tr>
+  
+      @foreach (OrderSchema order in _Orders)
+        {
+            <tr class="grid-35" >
+             <td class="grid-65">@order.Id</td>
+
+    <td class="grid-65">@order.Email </td>
+
+    <td class="grid-65">@order.Address</td>
+
+    <td class="grid-65">@order.Contents</td>
+      </tr>
+        }
+   
+
+
+  </table>
+  </div>
+   </div>
+   </div>
+               
 @code {
 
     private List<OrderSchema> _Orders { get; set; } = new();
