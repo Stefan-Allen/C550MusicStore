@@ -1,8 +1,10 @@
 ﻿@page "/Checkout"
 @using MusicStore.Data
+@using System.Net
 
-@inject UserService UserService
+@inject UserService UserService;
 @inject NavigationManager NavManager;
+@inject BasketService BasketService;
 
 <div class="topnav">
     <a class="active" href="/Home">Home</a>
@@ -25,7 +27,7 @@
                         <a for="email">Email:</a>
                     </div>
                     <div class="grid-65">
-                        <input type="email" required="" id="email" tabindex="6" />
+                        <input type="email" required="" id="email" tabindex="6" @bind="Email"/>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -33,7 +35,7 @@
                         <a for="email">Name:</a>
                     </div>
                     <div class="grid-65">
-                        <input type="text" required="" id="email" tabindex="6" />
+                        <input type="text" required="" id="email" tabindex="6" @bind="FullName"/>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -41,7 +43,7 @@
                         <a for="email">Street name:</a>
                     </div>
                     <div class="grid-65">
-                        <input type="text" required="" id="email" tabindex="6" />
+                        <input type="text" required="" id="email" tabindex="6" @bind="StreetName"/>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -49,11 +51,11 @@
                         <a for="email">Postcode:</a>
                     </div>
                     <div class="grid-65">
-                        <input type="text" required="" id="email" tabindex="6" />
+                        <input type="text" required="" id="email" tabindex="6" @bind="PostCode"/>
                     </div>
                 </fieldset>
                 <p>
-                    <button class="btnbtnprimary">
+                    <button class="btnbtnprimary" @onclick="OnCheckout">
                         Checkout
                     </button>
                 </p>
@@ -64,6 +66,11 @@
     </div>
 </div>
 @code {
+    private string FullName { get; set; } = string.Empty;
+    private string Email { get; set; } = string.Empty;
+    private string StreetName { get; set; } = string.Empty;
+    private string PostCode { get; set; } = string.Empty;
+    
     protected override void OnInitialized()
     {
         if (UserService.User == null)
@@ -72,5 +79,27 @@
             return;
         }
         base.OnInitialized();
+    }
+
+    private void OnCheckout()
+    {
+        if (string.IsNullOrWhiteSpace(FullName) || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(StreetName) || string.IsNullOrWhiteSpace(PostCode))
+        {
+            // Message Please
+
+            return;
+        }
+
+        var address = $"{FullName}\n{StreetName}\n{PostCode}";
+
+        var response = BasketService.Checkout(address, UserService.User!);
+
+        if (response == HttpStatusCode.NotFound)
+        {
+            // Message
+            return;
+        }
+        
+        // Message Create Order
     }
 }

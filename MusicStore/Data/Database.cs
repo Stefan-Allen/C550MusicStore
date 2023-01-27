@@ -12,6 +12,8 @@ public class Database : DbContext
     // Holds all Artists
     public DbSet<ArtistSchema> Artists { get; set; }
     
+    public DbSet<OrderSchema> Orders { get; set; }
+
     // Sets up configuration for using SQLite Database
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -23,6 +25,9 @@ public class Database : DbContext
     {
         // New Database Instance
         var db = new Database();
+
+        // Ensures that the Appropriate Tables Are Created
+        db.Database.EnsureCreated();
 
         // If the database has artists return
         if (db.Artists.Any()) return;

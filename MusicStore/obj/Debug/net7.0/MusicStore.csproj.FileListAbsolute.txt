@@ -221,3 +221,10 @@ C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\bin\Deb
 C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\stefa\OneDrive\Documents\AirChat\AirChat\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.JSInterop.dll
+D:\Development\University\C550\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+D:\Development\University\C550\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+D:\Development\University\C550\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\Development\University\C550\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+D:\Development\University\C550\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+D:\Development\University\C550\MusicPlayer\MusicStore\bin\Debug\net7.0\Microsoft.JSInterop.dll
+D:\Development\University\C550\MusicPlayer\MusicStore\obj\Debug\net7.0\scopedcss\Pages\Checkout.razor.rz.scp.css

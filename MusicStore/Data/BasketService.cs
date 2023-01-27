@@ -1,4 +1,5 @@
-﻿using MusicStore.Schemas;
+﻿using System.Net;
+using MusicStore.Schemas;
 
 namespace MusicStore.Data;
 
@@ -78,5 +79,37 @@ public class BasketService
         }
         // returns the total
         return total;
+    }
+
+    public HttpStatusCode Checkout(string address, UserSchema user)
+    {
+        if (Products.Count == 0) return HttpStatusCode.NotFound;
+        
+        var db = new Database();
+        
+        var count = !db.Orders.Any() ? 0 : db.Orders.Max(x => x.Id);
+
+        var contents = "";
+        
+        foreach (var (key, value) in Products)
+        {
+            contents += $"------------\nID:{key.Id}\nName:{key.Name}\nArtist: {key.Artist}\nPrice{key.Price}\nQuantity: {value}\n";
+        }
+
+        contents += "------------";
+        user.Orders.Add(new OrderSchema
+        {
+            Id = count + 1,
+            Address = address,
+            Contents = contents
+        });
+
+        db.Update(user);
+
+        db.SaveChanges();
+        
+        Products.Clear();
+
+        return HttpStatusCode.Created;
     }
 }

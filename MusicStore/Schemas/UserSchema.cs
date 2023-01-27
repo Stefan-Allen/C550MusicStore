@@ -13,4 +13,7 @@ public class UserSchema
     public string Gender { get; set; } = string.Empty;
     public DateTime Dob { get; set; } = DateTime.MinValue;
     public DateTime Created { get; set; } = DateTime.MinValue;
+
+    [ForeignKey("OrderId")]
+    public virtual List<OrderSchema> Orders { get; set; } = new();
 }
