@@ -1149,10 +1149,6 @@ ul + .section-title[b-s0vg48o4ts] {
 /* _content/MusicStore/Pages/Login.razor.rz.scp.css */
 
     /* Login Form */
-    .BodyLogin[b-zj5ggrvo40] {
-        height: 100%;
-        background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
-    }
 
     .BackSquare[b-zj5ggrvo40] {
         width: 360px;
@@ -1997,10 +1993,6 @@ span.logo-part[b-6mzorskmac] {
 }
 /* _content/MusicStore/Pages/Register.razor.rz.scp.css */
 /* Login Form */
-.BodyRegister[b-k31uor7rge] {
-  height: 100%;
-  background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
-}
 
 .BackSquare[b-k31uor7rge] {
   width: 360px;
