@@ -3,8 +3,16 @@
 
 @inject UserService UserService
 
+<div class="topnav">
+        <a class="active" href="/Home">Home</a>
+        <a href="/Artists">Artists</a>
+        <a href="/Basket">Basket</a>
+        <a href="/Products">Products</a>
+        <a href="/Home">Home</a>
+        <a href="/Profile">Profile</a>
+        <a href="/Search">Search</a>
+      </div>
 
-<body class="BodyProfile">
 <div class="wrapper">
     <div class="profile">
         <div class="content">
@@ -46,10 +54,10 @@
                             </p>
 
             </div>
-        </div>
+     
 </div>
 </div>
-</body>
+</div>
 @code {
     private string FullName { get; set; } = string.Empty;
     private string Username { get; set; } = string.Empty;

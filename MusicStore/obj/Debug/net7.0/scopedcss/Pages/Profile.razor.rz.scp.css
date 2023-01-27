@@ -1,8 +1,27 @@
-
-BodyProfile[b-6mzorskmac] {
-    height: 100%;
+.topnav[b-6mzorskmac] {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a[b-6mzorskmac] {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover[b-6mzorskmac] {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active[b-6mzorskmac] {
     background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
-}
+    color: white;
+  }
+
 .profile[b-6mzorskmac], .content[b-6mzorskmac] {
     -webkit-transition: 0.5s ease;
     -moz-transition: 0.5s ease;
@@ -137,13 +156,13 @@ span.photo[b-6mzorskmac] {
         color: #fff;
     }
 
-input[type="file"][b-6mzorskmac] {
+.input[type="file"][b-6mzorskmac] {
     /* position: absolute; */
     color: #555;
     font-size: 15px;
     top: 25%;
     box-shadow: none !important;
-    margin-left: !important;
+
     background-color: #ededed;
     width: 200px;
     border: 0;
