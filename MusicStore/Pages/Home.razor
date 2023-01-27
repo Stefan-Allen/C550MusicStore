@@ -3,13 +3,13 @@
 @using MusicStore.Schemas
 
 @inject ProductService ProductServiceInstance
+@inject NavigationManager NavManager
 
 <div class="topnav">
         <a class="active" href="/Home">Home</a>
         <a href="/Artists">Artists</a>
         <a href="/Basket">Basket</a>
         <a href="/Products">Products</a>
-        <a href="/Home">Home</a>
         <a href="/Profile">Profile</a>
         <a href="/Search">Search</a>
       </div>
@@ -35,7 +35,7 @@
 				<h3 class="name">Blues Music</h3>
 				<p class="meta"></p>
 				<p>
-					<button class="btnbtnprimary">
+					<button class="btnbtnprimary" @onclick = "@(() => {NavManager.NavigateTo("Genre/Blues");})" >
 						Search for Blues Music
 					</button>
 				</p>
@@ -43,12 +43,12 @@
 		</li>
 		<!-- card -->
 		<li class="album-card -small">
-			<img class="image" src="/th.jpg" alt="Genre" />
+			<img class="image" src="/th.jpg" alt="Genre"/>
 			<div class="album-info">
 				<h3 class="name">Jazz Music</h3>
 				<p class="meta"></p>
 				<p>
-					<button class="btnbtnprimary">
+					<button class="btnbtnprimary"@onclick="@(() => {NavManager.NavigateTo("Genre/Jazz");})" >
 						Search for Jazz Music
 					</button>
 				</p>
@@ -57,12 +57,12 @@
 	</ul>
 <ul class="albums-list">
 	<li class="album-card -small">
-			<img class="image" src="/th.jpg" alt="Genre" />
+			<img class="image" src="/th.jpg" alt="Genre"/>
 		<div class="album-info">
 			<h3 class="name">Rock Music</h3>
 			<p class="meta"></p>
 			<p>
-				<button class="btnbtnprimary">
+					<button class="btnbtnprimary" @onclick="@(() => {NavManager.NavigateTo("Genre/Rock");})">
 						Search for Rock Music
 				</button>
 			</p>
@@ -75,7 +75,7 @@
 				<h3 class="name">Country Music</h3>
 			<p class="meta"></p>
 			<p>
-				<button class="btnbtnprimary">
+					<button class="btnbtnprimary" @onclick="@(() => {NavManager.NavigateTo("Genre/Country");})">
 						Search for Country Music
 				</button>
 			</p>
@@ -89,7 +89,7 @@
 				<h3 class="name">Dance Music</h3>
 				<p class="meta"></p>
 				<p>
-					<button class="btnbtnprimary">
+					<button class="btnbtnprimary" @onclick="@(() => {NavManager.NavigateTo("Genre/Dance");})">
 						Search for Dance Music
 					</button>
 				</p>
@@ -97,12 +97,12 @@
 		</li>
 		<!-- card -->
 		<li class="album-card -small">
-			<img class="image" src="/th.jpg" alt="Collisiona Course" />
+			<img class="image" src="/th.jpg" alt="Collisiona Course"/>
 			<div class="album-info">
 				<h3 class="name">Pop Music</h3>
 				<p class="meta"></p>
 				<p>
-					<button class="btnbtnprimary">
+					<button class="btnbtnprimary" @onclick="@(() => {NavManager.NavigateTo("Genre/Pop");})">
 						Search for Pop Music
 					</button>
 				</p>
@@ -111,12 +111,12 @@
 	</ul>
 <ul class="albums-list">
 	<li class="album-card -small">
-		<img class="image" src="/th.jpg" alt="Minutes to Midnight" />
+			<img class="image" src="/th.jpg" alt="Minutes to Midnight"/>
 		<div class="album-info">
 				<h3 class="name">Classical Music</h3>
 			<p class="meta"></p>
 			<p>
-				<button class="btnbtnprimary">
+					<button class="btnbtnprimary" @onclick="@(() => {NavManager.NavigateTo("Genre/Classical");})">
 						Search for Classical Music
 				</button>
 			</p>
@@ -124,12 +124,12 @@
 	</li>
 	<!-- card -->
 	<li class="album-card -small">
-		<img class="image" src="/th.jpg" alt="Collisiona Course" />
+			<img class="image" src="/th.jpg" alt="Collisiona Course" />
 		<div class="album-info">
 				<h3 class="name">Rap Music</h3>
 			<p class="meta"></p>
 			<p>
-				<button class="btnbtnprimary">
+					<button class="btnbtnprimary" @onclick="@(() => {NavManager.NavigateTo("Genre/Rap");})">
 						Search for Rap Music
 				</button>
 			</p>

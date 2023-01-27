@@ -127,6 +127,10 @@ h1[b-8ku1vmiwcx] {
     max-width: 100%;
 }
 
+.items[b-8ku1vmiwcx] {
+    color: white;
+}
+
 .name[b-8ku1vmiwcx] {
     display: block;
     margin-bottom: 10px;
@@ -136,30 +140,11 @@ h1[b-8ku1vmiwcx] {
     font-weight: 500;
 }
 
-.data[b-8ku1vmiwcx] {
-    text-align: left;
-    font-size: 15px;
-    display: inline-block;
-    margin: 0 10px 5px 0;
-    color: white;
-    margin-right: 5px;
-    font-weight: normal;
-
-}
-
 form[b-8ku1vmiwcx] {
     display: inline;
 }
 
-
-
-.data-group[b-8ku1vmiwcx] { 
-        text-align: right;
-        float: right;
+.data-group[b-8ku1vmiwcx] {
+    margin-left: 7px;
 }
-
-
-    
-
-
 

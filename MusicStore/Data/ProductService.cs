@@ -56,7 +56,7 @@ public class ProductService
         
         db.Products.Add(new ProductSchema
         {
-            Id = count,
+            Id = count + 1,
             Artist = artist,
             Name = name.Trim(),
             Genre = genre.Trim(),

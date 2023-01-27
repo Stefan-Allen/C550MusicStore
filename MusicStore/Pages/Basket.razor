@@ -8,45 +8,42 @@
         <a href="/Artists">Artists</a>
         <a href="/Basket">Basket</a>
         <a href="/Products">Products</a>
-        <a href="/Home">Home</a>
         <a href="/Profile">Profile</a>
         <a href="/Search">Search</a>
       </div>
 
-<section>
     <h1 class="basket">Basket</h1>
 
-    <h3>You have @BasketService.Products.Count items in your shopping cart</h3>
+    <h3 class="items">You have @BasketService.Products.Count items in your shopping cart</h3>
 
-    <table>
-    <article class="product">
-        <div class="info">
-            <a class="name">Song Name</a>
+    <br />
+    <div class="col-7">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Cost</th>
+                    <th>Actions</th>
+                </tr>
 
-            <div class="data-group">
-         <tr>
-            <th>Name</th>
-            <th class="data">Quantity</th>
-            <th class="data">Price</th>
-            <th class="data">Cost</th>
-            <th>Actions</th>
-        </tr>
+            </thead>
+            <tbody>
+                @foreach (var keyValuePair in BasketService.Products)
+                {
+                    <BasketItem Item="@keyValuePair.Key" Quantity="@keyValuePair.Value"></BasketItem>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3" style="text-align:end">Total Cost</th>
+                    <th>@TotalCost.ToString("c")</th>
+                </tr>
+            </tfoot>
 
-            </div>
-        </div>
-            @foreach (var keyValuePair in BasketService.Products)
-        {
-            <BasketItem Item="@keyValuePair.Key" Quantity ="@keyValuePair.Value"></BasketItem> 
-        }
-        <tfoot>
-            <tr>
-                <th colspan="3" style="text-align:end">Total Cost</th>
-                <th>@TotalCost.ToString("c")</th>
-            </tr>
-        </tfoot>
-    </article>
-</table>
-</section>
+        </table>
+    </div>
 
 
 @code {

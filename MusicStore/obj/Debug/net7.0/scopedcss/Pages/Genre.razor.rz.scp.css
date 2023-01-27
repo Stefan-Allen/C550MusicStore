@@ -1,0 +1,97 @@
+
+.topnav[b-v2vx6tswb0] {
+    overflow: hidden;
+    background: rgb(50, 50, 50);
+    height: 6vh;
+}
+
+    .topnav a[b-v2vx6tswb0] {
+        float: left;
+        display: block;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .topnav a:hover[b-v2vx6tswb0] {
+            background-color: #ddd;
+            color: rgb(255, 255, 255);
+        }
+
+        .topnav a.active[b-v2vx6tswb0] {
+            background: #941a1a;
+            color: white;
+        }
+
+    .topnav .search-container[b-v2vx6tswb0] {
+        margin-left: 70%;
+    }
+
+    .topnav input[type=text][b-v2vx6tswb0] {
+        padding: 10px;
+        margin-top: 6px;
+        font-size: 17px;
+        border: none;
+    }
+
+    .topnav .search-container button[b-v2vx6tswb0] {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+
+        .topnav .search-container button:hover[b-v2vx6tswb0] {
+            background: #ccc;
+        }
+
+.section-title[b-v2vx6tswb0] {
+    color: white;
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .search-container[b-v2vx6tswb0] {
+        float: none;
+    }
+
+        .topnav a[b-v2vx6tswb0], .topnav input[type=text][b-v2vx6tswb0], .topnav .search-container button[b-v2vx6tswb0] {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+
+    .topnav input[type=text][b-v2vx6tswb0] {
+        border: 1px solid #ccc;
+    }
+
+    table[b-v2vx6tswb0] {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td[b-v2vx6tswb0], th[b-v2vx6tswb0] {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even)[b-v2vx6tswb0] {
+        background-color: #dddddd;
+    }
+
+    .table[b-v2vx6tswb0] {
+        color: white;
+    }
+}
