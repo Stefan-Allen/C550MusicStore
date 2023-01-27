@@ -70,6 +70,7 @@
     private string Email { get; set; } = string.Empty;
     private string StreetName { get; set; } = string.Empty;
     private string PostCode { get; set; } = string.Empty;
+    private string Message { get; set; } = string.Empty;
     
     protected override void OnInitialized()
     {
@@ -85,8 +86,7 @@
     {
         if (string.IsNullOrWhiteSpace(FullName) || string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(StreetName) || string.IsNullOrWhiteSpace(PostCode))
         {
-            // Message Please
-
+            Message = "Missing value";
             return;
         }
 
@@ -96,10 +96,9 @@
 
         if (response == HttpStatusCode.NotFound)
         {
-            // Message
+            Message = "No items in basket";
             return;
         }
-        
-        // Message Create Order
+        Message = "Order created";
     }
 }

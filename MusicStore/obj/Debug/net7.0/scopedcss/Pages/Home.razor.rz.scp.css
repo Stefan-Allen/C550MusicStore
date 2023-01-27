@@ -1,10 +1,4 @@
 
-body[b-s0vg48o4ts] {
-    font-size: 16px;
-    background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
-    font-family: "Open Sans", sans-serif;
-}
-
 .topnav[b-s0vg48o4ts] {
     overflow: hidden;
     background-color: #333;
@@ -25,7 +19,7 @@ body[b-s0vg48o4ts] {
   }
   
   .topnav a.active[b-s0vg48o4ts] {
-    background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
+
     color: white;
   }
 

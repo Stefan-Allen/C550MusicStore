@@ -1,10 +1,4 @@
 ﻿
-body {
-    font-size: 16px;
-    background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
-    font-family: "Open Sans", sans-serif;
-}
-
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -25,7 +19,6 @@ body {
   }
   
   .topnav a.active {
-    background: linear-gradient(90deg, rgba(83,11,11,1) 0%, rgba(148,26,26,1) 32%, rgba(148,26,26,1) 100%);
     color: white;
   }
 

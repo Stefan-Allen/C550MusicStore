@@ -2,10 +2,10 @@
 
 html, body {
     height: 100%;
-    background: linear-gradient(-45deg, #ff0000, #ffe600, #09ff00, #00ffd5, #002fff, #d400ff, #ff0000, #ff0000, #ffe600, #09ff00, #00ffd5, #002fff, #d400ff, #ff0000 );
-	background-size: 400% 400%;
-	-webkit-animation: gradientBG 10s ease infinite;
-	        animation: gradientBG 10s ease infinite;
+    background: linear-gradient(-45deg, #ff0000, #5c0000, #a50000, #cf0000 );
+    background-size: 400% 400%;
+    -webkit-animation: gradientBG 10s ease infinite;
+    animation: gradientBG 10s ease infinite;
 }
 
 h1:focus {
