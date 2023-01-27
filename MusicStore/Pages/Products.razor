@@ -16,6 +16,7 @@
         <a href="/Products">Products</a>
         <a href="/Profile">Profile</a>
         <a href="/Search">Search</a>
+    <a href="/Checkout">Checkout</a>
       </div>
 
 <!-- Login Form -->
@@ -82,7 +83,11 @@
 
     protected override void OnInitialized()
     {
-        if(UserService.User == null) NavManager.NavigateTo("Login");
+        if (UserService.User == null)
+        {
+            NavManager.NavigateTo("Login");
+            return;
+        }
         base.OnInitialized();
     }
 

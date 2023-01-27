@@ -13,6 +13,7 @@
         <a href="/Products">Products</a>
         <a href="/Profile">Profile</a>
         <a href="/Search">Search</a>
+	<a href="/Checkout">Checkout</a>
       </div>
 
 <div class="container">
@@ -147,8 +148,16 @@
 
 	protected override void OnInitialized()
 	{
-		if(UserService.User == null) NavManager.NavigateTo("Login");
-		
+		if(UserService.User == null)
+		{
+			if (UserService.User == null)
+			{
+				NavManager.NavigateTo("Login");
+				return;
+			}
+			return;
+		}
+
 		Products = ProductServiceInstance.GetProducts();
 		Console.WriteLine(Products.Any(p => p.Name.ToLower().Trim().Contains("TEST".ToLower().Trim())));
 		base.OnInitialized();

@@ -218,14 +218,12 @@
         // Account Already Exists
         if (result == HttpStatusCode.Conflict)
         {
-            Console.WriteLine("2");
             Message = "Username already exits";
         }
     // Else Account Created Response
         else
         {
-            Console.WriteLine(NavManager.BaseUri);
-            NavManager.NavigateTo(NavManager.BaseUri + "/Login", true);
+            NavManager.NavigateTo("Login", true);
         }
     }
 }

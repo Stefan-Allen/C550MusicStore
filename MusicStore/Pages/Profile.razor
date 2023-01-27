@@ -11,6 +11,7 @@
         <a href="/Products">Products</a>
         <a href="/Profile">Profile</a>
         <a href="/Search">Search</a>
+    <a href="/Checkout">Checkout</a>
       </div>
 
 <div class="wrapper">
@@ -68,7 +69,11 @@
     protected override void OnInitialized()
     {
         
-        if(UserService.User == null) NavManager.NavigateTo("Login");
+        if (UserService.User == null)
+        {
+            NavManager.NavigateTo("Login");
+            return;
+        }
         base.OnInitialized();
         if (UserService.User?.FullName != null) FullName = UserService.User?.FullName;
         if (UserService.User?.Username != null) Username = UserService.User?.Username;

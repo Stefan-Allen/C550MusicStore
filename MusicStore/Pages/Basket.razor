@@ -12,6 +12,7 @@
         <a href="/Products">Products</a>
         <a href="/Profile">Profile</a>
         <a href="/Search">Search</a>
+        <a href="/Checkout">Checkout</a>
       </div>
 
     <h1 class="basket">Basket</h1>
@@ -53,7 +54,11 @@
 
     protected override void OnInitialized()
     {
-        if(UserService.User == null) NavManager.NavigateTo("Login");
+        if (UserService.User == null)
+        {
+            NavManager.NavigateTo("Login");
+            return;
+        }
         base.OnInitialized();
         TotalCost = BasketService.GetTotal();
     }

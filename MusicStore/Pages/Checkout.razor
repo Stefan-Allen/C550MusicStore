@@ -1,0 +1,52 @@
+﻿@page "/Checkout"
+@using MusicStore.Data
+
+@inject UserService UserService
+@inject NavigationManager NavManager;
+
+<div class="topnav">
+    <a class="active" href="/Home">Home</a>
+    <a href="/Artists">Artists</a>
+    <a href="/Basket">Basket</a>
+    <a href="/Products">Products</a>
+    <a href="/Profile">Profile</a>
+    <a href="/Search">Search</a>
+    <a href="/Checkout">Checkout</a>
+</div>
+
+<div class="wrapper">
+    <div class="profile">
+        <div class="content">
+            <h1>Checkout</h1>
+            <div action="">
+                <!-- Email -->
+                <fieldset>
+                    <div class="grid-35">
+                        <a for="email">Email:</a>
+                    </div>
+                    <div class="grid-65">
+                        <a type="email" id="email" tabindex="6" />
+                    </div>
+                </fieldset>
+                <p>
+                    <button class="btnbtnprimary">
+                        Checkout
+                    </button>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+@code {
+    protected override void OnInitialized()
+    {
+        if (UserService.User == null)
+        {
+            NavManager.NavigateTo("Login");
+            return;
+        }
+        base.OnInitialized();
+    }
+}

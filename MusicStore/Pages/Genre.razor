@@ -13,6 +13,7 @@
     <a href="/Products">Products</a>
     <a href="/Profile">Profile</a>
     <a href="/Search">Search</a>
+    <a href="/Checkout">Checkout</a>
     <div class="topnav">
         <div class="search-container">
             <div action="/action_page.php">
@@ -46,7 +47,11 @@
 
    protected override void OnInitialized()
    {
-       if(UserService.User == null) NavManager.NavigateTo("Login");
+        if (UserService.User == null)
+        {
+            NavManager.NavigateTo("Login");
+            return;
+        }
       Products = ProductService.SearchByGenre(GenreString);
       base.OnInitialized();
    }
