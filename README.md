@@ -1,2 +1,2 @@
-# MusicPlayer
-Music Player
+# Music Store
+By Stefan, Akes, Ben
